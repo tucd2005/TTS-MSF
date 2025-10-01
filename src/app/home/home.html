@@ -1,0 +1,14 @@
+<p>home works!</p>
+<main>
+    <h1>{{welcomeMessage}}</h1>
+
+    @if (isContentVisible) {
+        <p>Đây là nội dung được hiển thị có điều kiện.</p>
+        <button (click)="isContentVisible = false"> Ẩn Nội Dung</button>
+    } @else { 
+        <p style="color: red;">Nội dung đã bị ẩn.</p>
+        <button (click)="isContentVisible = true">Hiện Nội Dung<</button>
+    }
+
+
+</main>
