@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Components } from './components';
+import { ClassSchedule } from './class-schedule';
 
-describe('Components', () => {
-  let component: Components;
-  let fixture: ComponentFixture<Components>;
+describe('ClassSchedule', () => {
+  let component: ClassSchedule;
+  let fixture: ComponentFixture<ClassSchedule>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Components]
+      imports: [ClassSchedule]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Components);
+    fixture = TestBed.createComponent(ClassSchedule);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

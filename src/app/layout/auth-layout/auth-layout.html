@@ -1,1 +1,12 @@
-<p>auth-layout works!</p>
+<div class="background">
+  <div class="login-container">
+    <div class="background__img">
+      <img src="bg-auth.jpg" alt="">
+
+      <div class="form-wrapper">
+        <!-- Đây là chỗ render component con (register / login / forgot) -->
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

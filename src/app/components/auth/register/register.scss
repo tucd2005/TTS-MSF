@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+}
+
+.background {
+  background: #f2f6fe;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.login-container {
+  /* Đảm bảo khung ngoài có giới hạn và bo góc */
+  max-width: 1000px;
+  width: 90vw;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  display: block; /* Quan trọng: để background__img chiếm toàn bộ */
+}
+
+.background__img {
+  width: 100%;
+  min-height: 600px; /* Chiều cao tối thiểu cho khung ảnh */
+  position: relative; /* 👈 KHUNG THAM CHIẾU: Quan trọng nhất */
+  overflow: hidden;
+}
+
+.background__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px; /* Áp dụng bo góc cho ảnh */
+}
+
+.form-wrapper {
+  /* BỎ CÁC THUỘC TÍNH CŨ (right: 300px, height: 600px) */
+  position: absolute; /* 👈 ĐỊNH VỊ TUYỆT ĐỐI */
+  background: #ffffff;
+  width: 400px;
+  padding: 40px;
+  border-radius: 15px;
+
+  /* Neo Form vào giữa-phải của background__img */
+  top: 50%;
+  right: 30px; /* Cách lề phải 30px */
+  transform: translateY(-50%);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15); /* Thêm shadow để nổi bật */
+  z-index: 10;
+}
+
+/* ------------------- Logo (Góc trên bên trái của Form) ------------------- */
+.logo__img {
+  position: absolute; /* Áp dụng absolute lên container của logo */
+  width: 230px;
+  left: -45px;
+  top: -9px;
+  z-index: 11;
+}
+
+.logo__img img {
+  width: 100%; /* Đảm bảo ảnh logo đầy đủ width của container */
+  height: auto;
+  border-radius: 0; /* Bỏ border-radius 20px từ cha */
+}
+
+.form-title {
+  position: absolute;
+  top: 500px;
+}
+
+.title {
+  margin-top: 30px;
+}
+.title p {
+  text-align: center;
+  margin-top: -10px;
+}
+
+.auth-form__inputs {
+  .auth-form__input {
+    margin: 10px 0; /* chỉ margin trên dưới thôi */
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 60px;
+    padding: 0 12px;
+    width: 100%; /* full width như button */
+    box-sizing: border-box;
+    display: block;
+  }
+}
+
+.auth__button {
+  margin-top: 40px;
+  width: 100%;
+  height: 55px;        
+  background: #5dc2a7;
+  border: 1px solid #5dc2a7;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 12px 10px; ///* giữ khoảng cách trên-dưới */
+  line-height: normal; /* reset lại */
+  display: flex; /* căn giữa cả theo trục ngang và dọc */
+  align-items: center;
+  justify-content: center;
+  font-family: 'Baloo Tammudu', Arial, sans-serif; /* gán trực tiếp */
+}
+
+
+.bottom_button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: gray;
+  font-size: 10px;
+  margin-top: 20px;
+}
+
+.bottom_button::before,
+.bottom_button::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid gray; /* đường ngang */
+}
+
+.bottom_button::before {
+  margin-right: 10px; /* khoảng cách giữa line và chữ */
+}
+
+.bottom_button::after {
+  margin-left: 10px;
+}
+
+.brand {
+  margin: 10px;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.brand i {
+  width: 100px;
+  height: 30px; /* thêm chiều cao cho box */
+  border: 1px solid gray;
+  display: flex; /* để căn giữa */
+  align-items: center; /* căn giữa dọc */
+  justify-content: center; /* căn giữa ngang */
+  border-radius: 5px; /* bo góc nhìn đẹp hơn */
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.brand i:hover {
+  background: #f3f3f3; /* hover cho đẹp */
+  transform: scale(1.05);
+}
+
+.text__bottom {
+  margin-top: 20px;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  p {
+    color: gray;
+  }
+  a {
+    font-weight: bolder;
+    color: black;
+  }
+  
+}
+a:hover{
+    cursor: pointer;
+  }
