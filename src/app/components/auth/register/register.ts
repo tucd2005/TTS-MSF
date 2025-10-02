@@ -28,7 +28,8 @@ export const passwordMatchValidator: ValidatorFn = (
   standalone: true,
   imports: [RouterLink, ReactiveFormsModule],
 templateUrl: './register.html',
-  styleUrl: './register.scss'
+styleUrls: ['./register.scss']
+
 })
 
 export class Register {
@@ -53,7 +54,7 @@ export class Register {
       this.authService.register(rawForm).subscribe({
         next: () => {
           alert('Đăng ký thành công! Vui lòng đăng nhập.')
-          this.router.navigate(['/auth/ login']);
+          this.router.navigate(['/auth/login']);
         },
         error: (err) => {
           alert('Đã có lỗi xảy ra!');

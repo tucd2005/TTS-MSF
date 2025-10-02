@@ -3,27 +3,9 @@
   "users": [
     {
       "email": "tucdph51409@gmail.com",
-      "password": "123456",
-      "confirmPassword": "123456",
-      "id": 1
-    },
-    {
-      "email": "tudsa@dfhdf.sdfd",
       "password": "123456789",
       "confirmPassword": "123456789",
-      "id": 2
-    },
-    {
-      "email": "ductu205@gmail.com",
-      "password": "123456",
-      "confirmPassword": "123456",
-      "id": 3
-    },
-    {
-      "email": "ductu205@gmail.com",
-      "password": "123456",
-      "confirmPassword": "123456",
-      "id": 4
+      "id": 1
     }
   ]
 }

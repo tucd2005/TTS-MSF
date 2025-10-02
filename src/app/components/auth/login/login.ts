@@ -9,5 +9,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './login.scss'
 })
 export class Login {
-
+  
 }
