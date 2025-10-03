@@ -1,0 +1,19 @@
+.auth__button {
+    margin-top: 40px;
+    width: 100%;
+    height: 55px;        
+    background: #5dc2a7;
+    border: 1px solid #5dc2a7;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px 10px; ///* giữ khoảng cách trên-dưới */
+    line-height: normal; /* reset lại */
+  }
+  
+  .auth__button:active{
+    transition-duration: 0.1s;
+    background-color: #7dffdc;
+  }
+  

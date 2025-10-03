@@ -1,4 +1,3 @@
-
-<button [class.primary] = "type === 'primary'" [class.secondary]= "type === 'secondary'"> 
-    {{label}}
-</button>
+<button [ngClass]="buttonClass" class="font-baloo" [disabled]="disabled" [type]="type">
+    <ng-content></ng-content>
+  </button>

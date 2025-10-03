@@ -4,11 +4,12 @@ import { Router, RouterLink } from '@angular/router';
 import { Auth } from './../../../core/services/auth';
 import { passwordMatchValidator } from '../../../core/validators/validators-auth';
 import { ValidationMessage } from '../../../shared/validation-message/validation-message';
+import { Button } from "../../../shared/button/button";
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [RouterLink, ReactiveFormsModule, ValidationMessage],
+  imports: [RouterLink, ReactiveFormsModule, ValidationMessage, Button],
 templateUrl: './register.html',
 styleUrls: ['./register.scss']
 
