@@ -1,192 +1,259 @@
 .mission {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* giữ h2 không bị kéo dãn */
-    gap: 20px;
-  }
-  
-  .mission__left {
-    flex: 1; /* chiếm hết phần còn lại */
-    max-width: 950px; /* giới hạn độ rộng */
-    padding-bottom: 10px;
-  }
-  
-  .mission__left h2 {
-    display: flex;
-    justify-content: start;
-  }
-  
-  .whiteboard {
-    width: 100%;      
-    height: 550px;
-    font-size: 16px;
-    line-height: 1.5;
-    font-family: Arial, sans-serif;
-    padding: 15px;
-    background: #fff;
-    border: 1.5px solid #d1d5db;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  
-    resize: none;  
-    outline: none;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* giữ h2 không bị kéo dãn */
+  gap: 20px;
+}
 
-  .tabs {
-    display: flex;
-    gap: 10px;
-    justify-content: end;
-    margin-right: 25px;
-  }
-  
-  .tabs__item {
-    padding: 10px 20px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
+.mission__left {
+  flex: 1; /* chiếm hết phần còn lại */
+  max-width: 950px; /* giới hạn độ rộng */
+  padding-bottom: 10px;
+}
+
+.mission__left h1 {
+  display: flex;
+  justify-content: start;
+}
+
+.whiteboard {
+  width: 100%;
+  height: 350px;
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: Arial, sans-serif;
+  padding: 30px;
+  background: #fff;
+  border: 1.5px solid #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 4px #aaaaaa;
+  color: #71717a;
+  resize: none;
+  outline: none;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+h1 {
+  padding-left: 10px;
+  font-weight: 300;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+  margin-right: 25px;
+}
+
+.tabs__item {
+  padding: 0px 20px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border: none;
+  cursor: pointer;
+  p {
     color: #fff;
-    font-size: 14px;
-  }
-  
-  /* màu riêng cho từng loại */
-  .tabs__item--orange {
-    background-color: #f97316;
-  }
-  
-  .tabs__item--green {
-    background-color: #22c55e;
-  }
-  
-  .tabs__item--yellow {
-    background-color: #eab308;
-  }
-  
-  /* trạng thái active (tab đang chọn) */
-  .tabs__item--active {
-    outline: 3px solid #3b82f6; /* viền xanh khi chọn */
-  }
-
-
-
-  // bên phải 
-
-  .notification{
-    max-width: 300px;
-    width: 270px;
-    height: 270px;
-    background: #fff;
-    margin-top: 100px;
-    border-radius: 20px;
-  }
-
-
-  .notification_header{
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    margin-left: 20px;
-  }
-
-  .notification_header i{
-    border: 1px ;
-    background: #5DC2A7;
-    padding: 10px;
-    border-radius: 15px;
-    color: #fff;
-
-  }
-
-  .notification_header {
-    font-size: larger;
-  }
-
-  .notification_header h3{
-    padding-top: 12px;
-  }
-
-
-  .ic.notification_info {
-    display: flex;
-    flex-direction: column;
-    gap: 12px; /* khoảng cách giữa các item */
-  }
-  
-  .notification_item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: #fff;
-    padding: 8px 12px;
-    margin: 5px;
-    border-bottom: 1px solid rgb(188, 188, 188);
-    width: 90%;
-  }
-  
-  .icon-box {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
     font-size: 18px;
-    flex-shrink: 0;
+    position: relative;
+    bottom: -3px;
   }
-  
-  .warning {
-    background: #fff3cd;
-    color: #e0a800;
-  }
-  
-  .info {
-    background: #cfe2ff;
-    color: #0d6efd;
-  }
-  
-  .danger {
-    background: #f8d7da;
-    color: #dc3545;
-  }
-  
-  .text__info {
-    font-size: 12px;
-    line-height: 1.4;
-  }
-  
-  .info__time {
-    font-weight: bold;
-    font-size: 11px;
-    color: #555;
-  }
-  
+}
 
-  .notification__button{
-    display: flex;
-    justify-content: end;
-    gap: 10px;
-    margin: 10px; 
-    margin-right: 22px;
+/* màu riêng cho từng loại */
+.tabs__item--orange {
+  background-color: #fe924f;
+}
 
-    button{
-      font-size: 10px;
-      padding: 5px;
-      border-radius: 15px;
-      font-weight: 700;
-    }
-  }
+.tabs__item--green {
+  background-color: #22c55e;
+}
 
- .skip{
-    background: #FFF;
-    color: #5DC2A7;
-    border: 1px solid #5DC2A7;
+.tabs__item--yellow {
+  background-color: #eab308;
+}
+
+/* trạng thái active (tab đang chọn) */
+.tabs__item--active {
+  outline: 3px solid #3b82f6; /* viền xanh khi chọn */
+}
+
+/* ========================================================== */
+/* ================== WIDGET CONTAINER (.notification) ================== */
+/* ========================================================== */
+.notification {
+  /* Đã sửa width để có không gian cho padding */
+  max-width: 300px;
+  width: 300px; /* Đặt width cố định để dễ căn chỉnh */
+  /* Bỏ height: 270px; để nội dung tự co giãn */
+  background: #fff;
+  margin-top: 100px;
+  border-radius: 20px;
+  box-shadow: 0 4px 4px #aaaaaa;
+  overflow: hidden; /* Đảm bảo nội dung không tràn ra ngoài border-radius */
+}
+
+/* ========================================================== */
+/* ================== HEADER (.notification_header) ================== */
+/* ========================================================== */
+.notification_header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* Dùng padding thay vì margin-left để căn chỉnh icon */
+  margin: 15px 20px 10px 20px;
+}
+
+.notification_header i {
+  /* Khung màu xanh lá cho icon chuông */
+  background: #5dc2a7;
+  padding: 10px; /* Giảm padding một chút */
+  border-radius: 10px; /* Bo tròn hoàn hảo */
+  color: #fff;
+  font-size: 16px;
+}
+
+.notification_header h3 {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 700;
+  position: relative; //! phải để relative để điều kiển chữ ở trong không thì không làm được
+  bottom: -3px;
+}
+
+/* ========================================================== */
+/* =================== BODY LIST (.notification_info) =================== */
+/* ========================================================== */
+.notification_info {
+  display: flex;
+  flex-direction: column;
+  /* Bỏ gap 12px ở đây, thay bằng margin trên item để kiểm soát tốt hơn */
+  // padding: 0 0 10px 0; /* Padding dưới để cách nút */
+  max-height: 180px; /* Giới hạn chiều cao và cho phép cuộn nếu cần */
+  overflow-y: auto;
+}
+
+/* ========================================================== */
+/* ==================== ITEM (.notification_item) ===================== */
+/* ========================================================== */
+.notification_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  margin: 0;
+  position: relative; /* Thêm để định vị pseudo-element */
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  .notification__arrow {
+    color: #cccc;
   }
- .confirm{
-    background: #FE924F;
-    color: #ffffff;
-    border: 1px solid #FE924F;
-  }
+}
+
+/* Tạo border ngắn */
+.notification_item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20px; /* Bắt đầu từ padding trái */
+  width: 260px; /* Đặt chiều dài mong muốn, ví dụ 150px */
+  height: 1px;
+  background-color: #eee; /* Màu border */
+}
+
+/* Ẩn border mặc định để tránh chồng lấp (tùy chọn) */
+.notification_item {
+  border-bottom: none; /* Bỏ border cũ nếu dùng ::after */
+}
+.notification_item:hover {
+  background: #f9f9f9; /* Hiệu ứng hover nhẹ */
+}
+
+/* ========================================================== */
+/* ================= ICON BOX (.icon-box) =================== */
+/* ========================================================== */
+.icon-box {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 14px; /* Giảm font-size icon một chút */
+  flex-shrink: 0;
+}
+
+.warning {
+  background: #fff3cd;
+  color: #e0a800;
+}
+
+.info {
+  background: #cfe2ff;
+  color: #0d6efd;
+}
+
+.danger {
+  background: #f8d7da;
+  color: #dc3545;
+}
+
+/* ========================================================== */
+/* ==================== TEXT (.text__info) ==================== */
+/* ========================================================== */
+.text__info {
+  font-size: 12px;
+  line-height: 1.3;
+  flex-grow: 1; /* Cho phép phần chữ chiếm hết không gian còn lại */
+}
+
+.info__time {
+  font-weight: 600; /* Dùng 600 thay vì bold */
+  font-size: 10px; /* Giảm cỡ chữ thời gian */
+  color: #000000;
+  margin: 0;
+}
+
+.info__note {
+  font-size: 11px; /* Dùng 12px để dễ đọc hơn */
+  margin: 0;
+  color: #717889;
+  overflow: hidden;
+  white-space: nowrap; /* Giữ nội dung trên một dòng */
+}
+
+/* ========================================================== */
+/* =================== BUTTONS (.notification__button) =================== */
+/* ========================================================== */
+.notification__button {
+  display: flex;
+  justify-content: flex-end; /* Sửa: dùng flex-end thay vì end */
+  gap: 10px;
+  padding: 10px 20px; /* Dùng padding để căn chỉnh */
+}
+
+.notification__button button {
+  font-size: 12px; /* Tăng cỡ chữ nút */
+  padding: 5px 12px; /* Tăng padding nút */
+  border-radius: 10px; /* Bo tròn hơn */
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.skip {
+  background: #fff;
+  color: #5dc2a7;
+  border: 1px solid #5dc2a7;
+}
+
+.confirm {
+  background: #fe924f;
+  color: #ffffff;
+  border: 1px solid #fe924f;
+}
+.notification_item:last-child::after {
+  display: none;
+}

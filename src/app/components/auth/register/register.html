@@ -3,12 +3,18 @@
     <img src="logo.png" alt="">
   </div>
   <div class="title">
-    <h2 class="font-baloo">Đăng ký</h2>
-    <p>Log in to unlock tailored content and stay connected with your community.</p>
+    <h1 class="font-baloo" style="font-weight: 50;">Đăng ký</h1>
+    <p class="text__title">Let’s get started. Fill in the details below to create
+      your account.</p>
+
+      <div class="language-selector">
+        <i class="fas fa-globe"></i>
+        <i class="fas fa-chevron-down"></i>
+    </div>
   </div>
 
-  <div class="auth-form__inputs">
-    <input type="email" id="email" formControlName="email" class="auth-form__input" placeholder="Email" name="email">
+  <div class="auth_form__inputs">
+    <input type="email" id="email" formControlName="email" class="auth-form__input" placeholder="Tên đăng nhập hoặc email" name="email">
     <app-validation-message [control]="registerForm.get('email')" fieldName="Địa chỉ Email">
     </app-validation-message>
 
@@ -25,23 +31,20 @@
     <app-validation-message [control]="registerForm.get('confirmPassword')" fieldName="Mật khẩu nhập lại">
     </app-validation-message>
 
+    <app-button type="submit">
+      Đăng ký
+    </app-button>
 
+    <div class="bottom_button">Hoặc bằng đăng nhập</div>
 
-  </div>
+    <div class="brand">
+      <i class="fa-brands fa-google fa-sm" style="color:#EA4335"></i>
+      <i class="fa-brands fa-facebook fa-sm" style="color:#1877F2"></i>
+      <i class="fa-brands fa-chrome fa-sm" style="color:#4CAF50"></i>
+    </div>
 
-  <app-button type="submit">
-    Đăng ký
-  </app-button>
-
-  <div class="bottom_button">Hoặc bằng đăng nhập</div>
-
-  <div class="brand">
-    <i class="fa-brands fa-facebook fa-lg" style="color:#1877F2"></i>
-    <i class="fa-brands fa-google fa-lg" style="color:#EA4335"></i>
-    <i class="fa-brands fa-chrome fa-lg" style="color:#4CAF50"></i>
-  </div>
-
-  <div class="text__bottom">
-    <p>Bạn đã có tài khoản?</p> <a routerLink="/auth/login">Đăng nhập</a>
+    <div class="text__bottom">
+      <p>Bạn đã có tài khoản?</p> <a routerLink="/auth/login">Đăng nhập</a>
+    </div>
   </div>
 </form>

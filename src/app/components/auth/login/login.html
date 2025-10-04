@@ -1,37 +1,42 @@
-<form class="password-reset-form">
-    <div class="logo__img">
-      <img src="logo.png" alt="">
+<form class="password-reset-form" >
+  <div class="logo__img">
+    <img src="logo.png" alt="">
+  </div>
+  <div class="title">
+    <h1 class="font-baloo" style="font-weight: 50;">Đăng ký</h1>
+    <p class="text__title">Let’s get started. Fill in the details below to create
+      your account.</p>
+
+      <div class="language-selector">
+        <i class="fas fa-globe"></i>
+        <i class="fas fa-chevron-down"></i>
     </div>
-    <div class="title">
-      <h2 class="font-baloo">Đăng nhập</h2>
-      <p>Log in to unlock tailored content and stay connected with your community.</p>
-    </div>
-  
-    <div class="auth-form__inputs">
-      <input type="text" class="auth-form__input" placeholder="Tên đăng nhập hoặc email" name="username">
-      <input type="password" class="auth-form__input" placeholder="Mật khẩu" name="password">
-    </div>
-    <div class="text__bottom__input">
-     <a routerLink="/auth/forgot-password">Forgot your password?</a>
-    </div>
-  
+  </div>
+
+  <div class="auth_form__inputs">
+    <input type="email" id="email" formControlName="email" class="auth-form__input" placeholder="Tên đăng nhập hoặc email" name="email">
+   
+
+    <input type="password" type="password" id="password" formControlName="password" class="auth-form__input"
+      placeholder="Mật khẩu" name="password">
+      <div class="text__bottom__input">
+        <a routerLink="/auth/forgot-password">Forgot your password?</a>
+       </div>
 
     <app-button type="submit">
-      Đăng nhập
+      Đăng ký
     </app-button>
-  
 
-      
     <div class="bottom_button">Hoặc bằng đăng nhập</div>
-  
+
     <div class="brand">
-      <i class="fa-brands fa-facebook fa-lg" style="color:#1877F2"></i>
-      <i class="fa-brands fa-google fa-lg" style="color:#EA4335"></i>
-      <i class="fa-brands fa-chrome fa-lg" style="color:#4CAF50"></i>
+      <i class="fa-brands fa-google fa-sm" style="color:#EA4335"></i>
+      <i class="fa-brands fa-facebook fa-sm" style="color:#1877F2"></i>
+      <i class="fa-brands fa-chrome fa-sm" style="color:#4CAF50"></i>
     </div>
-  
+
     <div class="text__bottom">
-      <p>Bạn đã có tài khoản?</p> <a routerLink="/auth/register">Đăng kí</a>
+      <p>Bạn đã có tài khoản?</p> <a routerLink="/auth/register">Đăng ký</a>
     </div>
-  </form>
-  
+  </div>
+</form>

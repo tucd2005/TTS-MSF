@@ -8,6 +8,7 @@ import { MainLayout } from './layout/main-layout/main-layout';
 import { Mission } from './components/main/mission/mission';
 import { ForgotPassword } from './components/auth/forgot-password/forgot-password';
 import { ChangePassword } from './components/auth/change-password/change-password';
+import { Dashboard } from './components/main/dashboard/dashboard';
 
 export const routes: Routes = [
     {path: "home", component: Home},
@@ -18,7 +19,8 @@ export const routes: Routes = [
     {
         path: "", component: MainLayout,
         children: [
-            {path: "mission", component: Mission}
+            {path: "mission", component: Mission},
+            {path: "dashboard", component: Dashboard},
         ]
     },
 

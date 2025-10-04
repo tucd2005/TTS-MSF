@@ -1,30 +1,56 @@
 <header>
-    <div class="boc-all">
+  <div class="header">
 
-        <img src="/logo.png" alt="" class="img__header">
-        
-        <div class="header-main">
-            
-            <ul>
-                <li class="header-icon"><i class="fa-regular fa-file-zipper"></i>Nhiệm vụ</li>
-                <li>Bảng tin</li>
-                <li> <i class="fa-regular fa-book"></i>Quy chế</li>
-                <li>Lịch học</li>
-                <li>Tài liệu</li>
-                <li>Bài tập</li>
-            </ul>
-        </div>
-        
-        <div class="action">
+    <img src="/logo.png" alt="" class="img__header">
 
-            <select name="" id="" class="action__option">
-                <option value=""></option>
-            </select>
-            
-            <i class="fa-regular fa-bell"></i>
-            
-            <img src="/avatar.png" class="profile" alt="">
-        </div>
-        
+    <div class="header-main">
+
+      <ul>
+        <li class="header-icon">
+          <a routerLink="/mission">
+            <span class="material-icons">assignment</span> Nhiệm vụ
+          </a>
+        </li>
+        <li>
+          <a routerLink="/dashboard">
+            <span class="material-icons">feed</span> Bảng tin
+          </a>
+        </li>
+        <li>
+          <a routerLink="/quy-che">
+            <span class="material-icons">gavel</span> Quy chế
+          </a>
+        </li>
+        <li>
+          <a routerLink="/lich-hoc">
+            <span class="material-icons">calendar_today</span> Lịch học
+          </a>
+        </li>
+        <li>
+          <a routerLink="/tai-lieu">
+            <span class="material-icons">menu_book</span> Tài liệu
+          </a>
+        </li>
+        <li>
+          <a routerLink="/bai-tap">
+            <span class="material-icons">library_books</span> Bài tập
+          </a>
+        </li>
+      </ul>
     </div>
+
+
+    <div class="action">
+
+      <div class="select__language">
+        <img src="vietnam.png" alt="" class="img__language">
+        <i class="fa-solid fa-angle-down"></i>
+      </div>
+
+      <i class="fa-regular fa-bell"></i>
+
+      <img src="/avatar.png" class="profile" alt="">
+    </div>
+
+  </div>
 </header>
