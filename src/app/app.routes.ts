@@ -9,6 +9,7 @@ import { Mission } from './components/main/mission/mission';
 import { ForgotPassword } from './components/auth/forgot-password/forgot-password';
 import { ChangePassword } from './components/auth/change-password/change-password';
 import { Dashboard } from './components/main/dashboard/dashboard';
+import { ClassSchedule } from './components/main/class-schedule/class-schedule';
 
 export const routes: Routes = [
     {path: "home", component: Home},
@@ -21,6 +22,7 @@ export const routes: Routes = [
         children: [
             {path: "mission", component: Mission},
             {path: "dashboard", component: Dashboard},
+            {path: "class-schedule", component: ClassSchedule },
         ]
     },
 
