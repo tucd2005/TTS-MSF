@@ -8,7 +8,6 @@
 .mission__left {
   flex: 1; /* chiếm hết phần còn lại */
   max-width: 950px; /* giới hạn độ rộng */
-  padding-bottom: 10px;
 }
 
 .mission__left h1 {
@@ -44,6 +43,7 @@ h1 {
   gap: 10px;
   justify-content: end;
   margin-right: 25px;
+  margin-top: -45px;
 }
 
 .tabs__item {

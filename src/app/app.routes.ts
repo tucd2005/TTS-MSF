@@ -10,19 +10,22 @@ import { ForgotPassword } from './components/auth/forgot-password/forgot-passwor
 import { ChangePassword } from './components/auth/change-password/change-password';
 import { Dashboard } from './components/main/dashboard/dashboard';
 import { ClassSchedule } from './components/main/class-schedule/class-schedule';
+import { Policy } from './components/main/policy/policy';
 
 export const routes: Routes = [
-    {path: "home", component: Home},
-    {path: "" , redirectTo: '/home', pathMatch: "full"},
-    
-    {path: "header", component: Header},
+    { path: "home", component: Home },
+    { path: "", redirectTo: '/home', pathMatch: "full" },
+
+    { path: "header", component: Header },
 
     {
         path: "", component: MainLayout,
         children: [
-            {path: "mission", component: Mission},
-            {path: "dashboard", component: Dashboard},
-            {path: "class-schedule", component: ClassSchedule },
+            { path: "mission", component: Mission },
+            { path: "dashboard", component: Dashboard },
+            { path: "class-schedule", component: ClassSchedule },
+            { path: "policy", component: Policy },
+
         ]
     },
 
@@ -30,10 +33,10 @@ export const routes: Routes = [
         path: 'auth',
         component: AuthLayout,
         children: [
-            {path: "register", component: Register},
-            {path: "login", component: Login},
-            {path: "forgot-password", component: ForgotPassword},
-            {path: "change-password", component: ChangePassword},
+            { path: "register", component: Register },
+            { path: "login", component: Login },
+            { path: "forgot-password", component: ForgotPassword },
+            { path: "change-password", component: ChangePassword },
         ]
     }
 ];

@@ -1,0 +1,134 @@
+.title {
+  text-align: center;
+  h1 {
+    font-size: 28px;
+    font-weight: 400;
+    span {
+      color: #f59d23;
+    }
+  }
+
+  p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #000000;
+  }
+}
+
+.classroom-hub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  background: #f3f6ff;
+  padding: 60px 80px;
+  font-family: 'Mulish', sans-serif;
+
+  .left-side {
+    position: relative;
+    width: 45%;
+    height: 480px;
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      z-index: 1;
+
+      &.circle-large {
+        width: 360px;
+        height: 360px;
+        background: #ffd86f;
+        top: 10%;
+        left: 8%;
+      }
+
+      &.circle-small {
+        width: 220px;
+        height: 220px;
+        background: #ffb739;
+        top: 45%;
+        left: 40%;
+      }
+    }
+
+    .student-placeholder {
+      position: absolute;
+      width: 260px;
+      height: 340px;
+      top: 20%;
+      left: 20%;
+      border-radius: 16px;
+      background: #d9d9d9;
+      z-index: 2;
+    }
+
+    .rocket-placeholder,
+    .trophy-placeholder {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background: #ccc;
+      border-radius: 50%;
+      opacity: 0.4;
+    }
+
+    .rocket-placeholder {
+      top: 5%;
+      left: 60%;
+      z-index: 3;
+    }
+
+    .trophy-placeholder {
+      bottom: 10%;
+      left: 5%;
+      z-index: 3;
+    }
+  }
+
+  .right-side {
+    width: 50%;
+
+    .rule-list {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .rule-item {
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+        .rule-number {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background: #2ca58d;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: bold;
+          margin-right: 12px;
+          flex-shrink: 0;
+        }
+
+        .rule-content {
+          flex: 1;
+          color: #333;
+          font-size: 14px;
+        }
+
+        .rule-plus {
+          font-size: 26px;
+          color: #999;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+}
