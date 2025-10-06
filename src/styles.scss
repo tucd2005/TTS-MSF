@@ -1,22 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Mulish', sans-serif; /* mặc định toàn site */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mulish', sans-serif; /* mặc định toàn site */
 }
 
-
 .font-baloo {
-    font-family: 'Baloo Tammudu', Arial, sans-serif ;
-    color: #5DC2A7;
-    text-align: center;
-  }
+  font-family: 'Baloo Tammudu', Arial, sans-serif;
+  color: #5dc2a7;
+  text-align: center;
+}
 
-  a{    
-    text-decoration: none;
-  }
+a {
+  text-decoration: none;
+}
 
-  ul{
-    list-style: none;
-  }
+ul {
+  list-style: none;
+}
+
+.time-box,
+.header.day p,
+.time-box div {
+  font-family: 'Baloo Tammudu', Arial, sans-serif;
+  color: #fff;
+  text-align: center;
+}
