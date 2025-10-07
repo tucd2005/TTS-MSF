@@ -10,6 +10,10 @@ i {
 header {
   box-shadow: 0 4px 4px #aaaaaa;
   position: relative;
+  // position: sticky;
+  // top: 0;
+  // z-index: 100;
+  // background: #fff;
 }
 
 .header {
@@ -58,6 +62,7 @@ header {
   align-items: center;
   gap: 1px;
   cursor: pointer;
+  padding: 10px;
 }
 
 .header-main ul li:hover {
@@ -75,7 +80,7 @@ header {
 /* Action Items */
 .action__option {
   border: 1px solid #ffffff;
-  padding: 5px 10px;
+  padding: 50px 10px;
   border-radius: 5px;
 }
 

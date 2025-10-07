@@ -11,6 +11,8 @@ import { ChangePassword } from './components/auth/change-password/change-passwor
 import { Dashboard } from './components/main/dashboard/dashboard';
 import { ClassSchedule } from './components/main/class-schedule/class-schedule';
 import { Policy } from './components/main/policy/policy';
+import { Documents } from './components/main/documents/documents';
+import { Exercises } from './components/main/exercises/exercises';
 
 export const routes: Routes = [
     { path: "home", component: Home },
@@ -25,6 +27,8 @@ export const routes: Routes = [
             { path: "dashboard", component: Dashboard },
             { path: "class-schedule", component: ClassSchedule },
             { path: "policy", component: Policy },
+            { path: "document", component:Documents },
+            { path: "exercise", component:Exercises },
 
         ]
     },
