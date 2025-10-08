@@ -28,20 +28,18 @@ ul {
   text-align: center;
 }
 
-
-
 /* Đảm bảo Font Awesome sử dụng font chữ của chính nó để hiển thị icon */
-.fa, 
-.fa-solid, 
+.fa,
+.fa-solid,
 .fa-regular {
-    font-family: "Font Awesome 6 Free", "Font Awesome 6 Solid", "Font Awesome 6 Regular", sans-serif !important;
+  font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Solid', 'Font Awesome 6 Regular', sans-serif !important;
 }
 
 /* Hoặc đơn giản và phổ biến hơn là sử dụng tên font mà thư viện đã định nghĩa */
 .fa-solid {
-    font-weight: 900;
+  font-weight: 900;
 }
 
 .fa-regular {
-    font-weight: 400; /* Cực kỳ quan trọng để icon Regular (rỗng) hiển thị */
+  font-weight: 400; /* Cực kỳ quan trọng để icon Regular (rỗng) hiển thị */
 }

@@ -18,118 +18,244 @@
 
 .classroom-hub {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 60px;
-  background: #f3f6ff;
-  padding: 60px 80px;
-  font-family: 'Mulish', sans-serif;
+  justify-content: space-between;
+  margin-top: 40px;
+}
 
+/* --- Left side --- */
+.left-side {
+  position: relative;
+  width: 48%;
+  min-height: 540px; /* đảm bảo đủ chỗ cho các hình */
+}
+
+/* BACKGROUND CIRCLES */
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none; /* tránh chặn click */
+}
+
+/* lớn nhất, mờ ở phía sau */
+.bg-circle.big-pale {
+  width: 400px;
+  height: 400px;
+  background: #f7e7b8;
+  left: -80px;
+  // top: -15px;
+  z-index: 0;
+  transform: scale(1);
+}
+
+/* vòng teal nhỏ phía bottom-left (dưới cúp) */
+.bg-circle.teal-small {
+  width: 120px;
+  height: 120px;
+  background: rgba(0, 190, 170, 0.18);
+  left: -26px;
+  bottom: 0px; 
+  z-index: 4;
+}
+
+/* chấm nhỏ cam phía phải vòng */
+.dot.orange-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #f59d23;
+  position: absolute;
+  left: 410px;
+    top: 460px;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* FOREGROUND: điều chỉnh z-index để ảnh/cup/rocket nằm trên các nền */
+.student {
+  position: absolute;
+  z-index: 3;
+  left: 110px;
+  top: 40px;
+}
+.student img {
+  width: 360px;
+  display: block;
+}
+
+.cup {
+  position: absolute;
+  z-index: 4;
+  left: 28px;
+  bottom: 60px;
+  margin: 63px -114px;
+}
+.cup img {
+  width: 90px;
+  display: block;
+  rotate: 10deg;
+}
+
+.rocket {
+  position: absolute;
+  z-index: 5;
+  left: 320px;
+  top: 18px;
+}
+.rocket img {
+  width: 72px;
+  display: block;
+}
+
+.star {
+  position: absolute;
+  z-index: 5;
+  left: 370px;
+  top: 190px;
+}
+.star img {
+  width: 18px;
+  display: block;
+}
+
+/* responsive nhỏ */
+@media (max-width: 1000px) {
   .left-side {
-    position: relative;
-    width: 45%;
-    height: 480px;
-
-    .circle {
-      position: absolute;
-      border-radius: 50%;
-      z-index: 1;
-
-      &.circle-large {
-        width: 360px;
-        height: 360px;
-        background: #ffd86f;
-        top: 10%;
-        left: 8%;
-      }
-
-      &.circle-small {
-        width: 220px;
-        height: 220px;
-        background: #ffb739;
-        top: 45%;
-        left: 40%;
-      }
-    }
-
-    .student-placeholder img {
-      position: absolute;
-      // width: 260px;
-      height: 340px;
-      top: 20%;
-      left: 20%;
-      border-radius: 16px;
-      // background: #d9d9d9;
-      z-index: 2;
-    }
-
-    .rocket-placeholder,
-    .trophy-placeholder {
-      position: absolute;
-      width: 80px;
-      height: 80px;
-      background: #ccc;
-      border-radius: 50%;
-      opacity: 0.4;
-    }
-
-    .rocket-placeholder {
-      top: 5%;
-      left: 60%;
-      z-index: 3;
-    }
-
-    .trophy-placeholder {
-      bottom: 10%;
-      left: 5%;
-      z-index: 3;
-    }
+    width: 52%;
+    min-height: 420px;
   }
-
-  .right-side {
-    width: 50%;
-
-    .rule-list {
-      margin-top: 30px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-
-      .rule-item {
-        background: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 16px 20px;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-
-        .rule-number {
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          background: #2ca58d;
-          color: #fff;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-weight: bold;
-          margin-right: 12px;
-          flex-shrink: 0;
-        }
-
-        .rule-content {
-          flex: 1;
-          color: #333;
-          font-size: 14px;
-        }
-
-        .rule-plus {
-          font-size: 26px;
-          color: #999;
-          flex-shrink: 0;
-        }
-      }
-    }
+  .bg-circle.big-pale {
+    width: 420px;
+    height: 420px;
+    left: -50px;
+    top: 0;
   }
+  .bg-circle.yellow-mid {
+    width: 300px;
+    height: 300px;
+    left: 40px;
+    top: 40px;
+  }
+  .student img {
+    width: 280px;
+    left: 90px;
+    top: 40px;
+  }
+  .bg-circle.teal-small {
+    width: 110px;
+    height: 110px;
+    left: 12px;
+    bottom: -6px;
+  }
+  .dot.orange-dot {
+    left: 380px;
+    top: 230px;
+  }
+}
+
+.student img {
+  width: 420px;
+  position: relative;
+  z-index: 2;
+  margin-left: -95px;
+  margin-top: 60px;
+}
+
+.cup {
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+}
+
+.cup img {
+  width: 80px;
+}
+
+.rocket {
+  position: absolute;
+  top: 40px;
+  left: 350px;
+}
+
+.rocket img {
+  width: 80px;
+  rotate: 45deg;
+  margin-top: -30px;
+}
+
+.star {
+  position: absolute;
+  top: 160px;
+  left: 397px;
+}
+
+.star img {
+  width: 30px;
+}
+
+/* --- Right side --- */
+.right-side {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.policy-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 14px 20px;
+  border-radius: 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+  transition: all 0.2s ease;
+}
+
+.policy-item:hover {
+  transform: translateY(-3px);
+}
+
+.num {
+  background: #4fd1c5;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 14px;
+}
+
+.text {
+  flex: 1;
+}
+
+.text h3 {
+  font-size: 16px;
+  color: #000;
+}
+
+.text p {
+  font-size: 14px;
+  color: #666;
+}
+
+.plus {
+  border: none;
+  background: #f3f4f6;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.plus:hover {
+  background: #e6e6e6;
 }

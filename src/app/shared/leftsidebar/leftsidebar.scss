@@ -1,0 +1,47 @@
+.left__side__bar {
+    flex: 0 0 160px;
+    background: transparent;
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  
+      li {
+        display: flex;
+        align-items: center;
+        gap: 8px; // khoảng cách giữa chấm và chữ
+        margin: 10px 0;
+        font-size: 16px;
+        color: #000;
+        cursor: pointer;
+        padding: 8px 14px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        font-weight: 600;
+  
+        // chấm tròn
+        &::before {
+          content: '';
+          width: 8px;
+          height: 8px;
+          background-color: #36c28c;
+          border-radius: 50%;
+          flex-shrink: 0;
+          transition: transform 0.3s ease;
+        }
+  
+        &:hover {
+          background: #fff;
+          color: #ffa803;
+        }
+  
+        &.active {
+          background: #fff;
+          color: #ffa803;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  
