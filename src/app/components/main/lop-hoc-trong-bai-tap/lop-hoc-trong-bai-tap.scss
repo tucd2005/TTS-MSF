@@ -1,0 +1,153 @@
+/* ===== BỐ CỤC CHÍNH ===== */
+.container {
+  display: grid;
+  grid-template-columns: 195px 1.4fr 300px; /* trái - giữa - phải */
+  gap: 24px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  align-items: start; /* 👈 giúp 3 cột thẳng hàng trên */
+  // padding: 20px;
+}
+
+/* ===== CỘT TRÁI ===== */
+.left__sidebar {
+  width: 100%;
+  // background: #fff;
+  // border-radius: 12px;
+  // box-shadow: 0 2px 8px rgba(33, 33, 33, 0.05);
+  margin-top: -10px;
+  // padding: 20px;
+}
+
+/* ===== CỘT GIỮA ===== */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+  padding-right: 8px;
+  scrollbar-width: thin;
+}
+
+.class-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ===== CARD ===== */
+.class-card {
+  background: #fff;
+  border-radius: 7px;
+  padding: 16px 20px;
+  box-shadow: 0 4px 10px -6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.25s ease;
+}
+.class-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 18px -6px rgba(0, 0, 0, 0.25);
+}
+
+.card-body{
+  border-bottom: 1px solid gray;
+}
+
+/* ===== HEADER ===== */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2e3a59;
+}
+
+/* ===== AVATARS ===== */
+.avatars {
+  display: flex;
+}
+.avatars img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-left: -8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.avatars img:first-child {
+  margin-left: 0;
+}
+
+/* ===== INFO ===== */
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: #6b7280;
+  font-size: 14px;
+}
+.card-info .info-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ===== FOOTER ===== */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+.start-time {
+  color: #64748b;
+}
+.btn-join {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.25s;
+}
+.btn-join i {
+  margin-left: 4px;
+}
+.btn-join:hover {
+  background-color: #2563eb;
+}
+
+/* ===== CỘT PHẢI ===== */
+.right-side {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-self: start; /* 👈 Giúp cột phải không bị trôi lên/xuống */
+  margin-top: -70px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 60px 1fr;
+  }
+  .right-side {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-info {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}

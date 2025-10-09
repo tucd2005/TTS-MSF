@@ -31,43 +31,12 @@ body {
   left: 20px;
 }
 
-/* Search top */
-.search__top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 25px;
-  gap: 15px;
-}
-
-.search__top input {
-  flex: 1;
-  padding: 10px 16px;
-  border-radius: 30px;
-  border: 1px solid #ddd;
-  font-size: 16px;
-  outline: none;
-}
-
-.search__top i {
-  position: relative;
-  left: 100px;
-}
-
-.search__top select {
-  padding: 10px 16px;
-  border-radius: 30px;
-  border: 1px solid #ddd;
-  background-color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-}
-
 /* Card grid */
 .cart__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
+  margin-top: 20px;
 }
 
 .cart__items {

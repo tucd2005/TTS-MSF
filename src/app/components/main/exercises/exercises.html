@@ -1,21 +1,13 @@
 <div class="exercise">
   <!-- Sidebar trái -->
   <app-leftsidebar>
+
   </app-leftsidebar>
 
   <!-- Khu vực chính -->
   <div class="main__exercise">
     <!-- Thanh tìm kiếm -->
-    <div class="search__bar">
-      <div class="search__input">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" placeholder="Tìm kiếm" />
-      </div>
-      <button class="sort-btn">
-        Mới nhất
-        <i class="fa-solid fa-chevron-down"></i>
-      </button>
-    </div>
+    <app-search></app-search>
 
     <!-- Danh sách bài tập -->
     <div class="exercise__list">
@@ -84,39 +76,5 @@
   </div>
 
   <!-- Cột phải -->
-  <div class="right__exercise">
-    <div class="class__info">
-      <h3 class="class__title">Toán 4 N2 - 48799</h3>
-
-      <div class="class__details">
-        <div class="row">
-          <span class="label">Mã lớp học:</span>
-          <span class="value">N2-456158</span>
-        </div>
-        <div class="row">
-          <span class="label">Sĩ số:</span>
-          <span class="value">32 học sinh</span>
-        </div>
-        <div class="row">
-          <span class="label">Ngày tạo:</span>
-          <span class="value">18:20, 20/08/2025</span>
-        </div>
-      </div>
-
-      <div class="teacher">
-        <div class="teacher-left">
-          <img src="https://i.pravatar.cc/50" alt="teacher" />
-          <div class="teacher-text">
-            <p>Giáo viên</p>
-            <h4>NGUYỄN HƯƠNG VÂN</h4>
-          </div>
-        </div>
-        <button class="teacher-go" aria-label="xem chi tiết">
-          <i class="fa-solid fa-angle-right"></i>
-        </button>
-      </div>
-    </div>
-
-    <app-remind style="margin-top: -60px;"></app-remind>
-  </div>
+  <app-right-exercise></app-right-exercise>
 </div>

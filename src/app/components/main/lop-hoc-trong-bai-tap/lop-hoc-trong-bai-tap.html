@@ -1,9 +1,16 @@
-<div>
+<div class="container">
+  <div class="left__sidebar">
 
     <app-leftsidebar></app-leftsidebar>
+  </div>
+
+  <main class="main-content">
+    <app-search></app-search>
 
     <div class="class-list">
-        <div class="class-card" *ngFor="let item of [1,2,3,4,5,6,7]">
+      <div class="class-card" *ngFor="let item of [1,2,3,4,5,6,7]">
+        <div class="card-body">
+
           <div class="card-header">
             <h3>Toán 4 - N2 - 24638742</h3>
             <div class="avatars">
@@ -13,24 +20,23 @@
               <img src="https://i.pravatar.cc/40?img=4" alt="">
             </div>
           </div>
-      
+
           <div class="card-info">
-            <div class="info-item">
-              <i class="fa-solid fa-wifi"></i> Mặc định
-            </div>
-            <div class="info-item">
-              <i class="fa-regular fa-user"></i> 100 người
-            </div>
-            <div class="info-item">
-              <i class="fa-regular fa-clock"></i> 3 ngày 02:00
-            </div>
-          </div>
-      
-          <div class="card-footer">
-            <span class="start-time">Bắt đầu: 12:57 18/05/2025</span>
-            <button class="btn-join">Tham gia lớp <i class="fa-solid fa-arrow-right"></i></button>
+            <div class="info-item"><i class="fa-solid fa-wifi"></i> Mặc định</div>
+            <div class="info-item"><i class="fa-regular fa-user"></i> 100 người</div>
+            <div class="info-item"><i class="fa-regular fa-clock"></i> 3 ngày 02:00</div>
           </div>
         </div>
+
+        <div class="card-footer">
+          <span class="start-time">Bắt đầu: 12:57 18/05/2025</span>
+          <button class="btn-join">Tham gia lớp <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
       </div>
-      <app-remind></app-remind>
+    </div>
+  </main>
+
+  <div class="right-side">
+    <app-remind></app-remind>
+  </div>
 </div>

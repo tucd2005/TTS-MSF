@@ -17,10 +17,11 @@ import { ThongTinTaiKhoan } from './components/auth/thong-tin-tai-khoan/thong-ti
 import { ThongBaoThanhCong } from './components/auth/thong-bao-thanh-cong/thong-bao-thanh-cong';
 import { AdminDashboard } from './components/main/admin-dashboard/admin-dashboard';
 import { Profile } from './components/main/profile/profile';
+import { LopHocTrongBaiTap } from './components/main/lop-hoc-trong-bai-tap/lop-hoc-trong-bai-tap';
 
 export const routes: Routes = [
-    { path: "home", component: Home },
-    { path: "", redirectTo: '/home', pathMatch: "full" },
+    // { path: "home", component: Home },
+    // { path: "", redirectTo: '/home', pathMatch: "full" },
 
     { path: "header", component: Header },
     { path: "thong-tin-tai-khoan", component: ThongTinTaiKhoan },
@@ -37,6 +38,7 @@ export const routes: Routes = [
             { path: "document", component: Documents },
             { path: "exercise", component: Exercises },
             { path: "profile", component: Profile },
+            { path: "lop-hoc", component: LopHocTrongBaiTap },
 
         ]
     },
