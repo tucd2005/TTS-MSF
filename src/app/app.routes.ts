@@ -13,13 +13,20 @@ import { ClassSchedule } from './components/main/class-schedule/class-schedule';
 import { Policy } from './components/main/policy/policy';
 import { Documents } from './components/main/documents/documents';
 import { Exercises } from './components/main/exercises/exercises';
+import { ThongTinTaiKhoan } from './components/auth/thong-tin-tai-khoan/thong-tin-tai-khoan';
+import { ThongBaoThanhCong } from './components/auth/thong-bao-thanh-cong/thong-bao-thanh-cong';
+import { AdminDashboard } from './components/main/admin-dashboard/admin-dashboard';
+import { Profile } from './components/main/profile/profile';
 
 export const routes: Routes = [
     { path: "home", component: Home },
     { path: "", redirectTo: '/home', pathMatch: "full" },
 
     { path: "header", component: Header },
+    { path: "thong-tin-tai-khoan", component: ThongTinTaiKhoan },
+    { path: "thong-bao", component: ThongBaoThanhCong },
 
+    { path: "admin", component: AdminDashboard },
     {
         path: "", component: MainLayout,
         children: [
@@ -27,8 +34,9 @@ export const routes: Routes = [
             { path: "dashboard", component: Dashboard },
             { path: "class-schedule", component: ClassSchedule },
             { path: "policy", component: Policy },
-            { path: "document", component:Documents },
-            { path: "exercise", component:Exercises },
+            { path: "document", component: Documents },
+            { path: "exercise", component: Exercises },
+            { path: "profile", component: Profile },
 
         ]
     },

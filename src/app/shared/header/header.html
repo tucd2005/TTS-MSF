@@ -41,16 +41,24 @@
 
 
     <div class="action">
-
       <div class="select__language">
-        <img src="vietnam.png" alt="" class="img__language">
+        <img src="vietnam.png" alt="" class="img__language" />
         <i class="fa-solid fa-angle-down"></i>
       </div>
-
+    
       <i class="fa-regular fa-bell"></i>
-
-      <img src="/avatar.png" class="profile" alt="">
+    
+      <!-- Avatar dropdown -->
+      <div class="profile__menu">
+        <img src="/avatar.png" class="profile" alt="Avatar" />
+        <ul class="dropdown">
+          <li><a href="/auth/login">Đăng nhập</a></li>
+          <li><a href="/profile">Thông tin cá nhân</a></li>
+          <li><a href="/admin">Admin</a></li>
+        </ul>
+      </div>
     </div>
+    
 
   </div>
 </header>

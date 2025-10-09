@@ -1,0 +1,132 @@
+
+  .profile-page {
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  /* HEADER */
+  .profile-header {
+    background: #5DC2A7;
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    margin-bottom: 20px;
+  }
+  
+  .profile-header .student-name {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  
+  .profile-header .school span {
+    font-weight: 500;
+    color: #fffcd6;
+  }
+  
+  .stats {
+    display: flex;
+    gap: 25px;
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .avatar img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+  }
+  
+  /* SECTION */
+  .section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  
+  .section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #1e3a8a;
+  }
+  
+  .info-list {
+    list-style: none;
+  }
+  
+  .info-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 15px;
+  }
+  
+  .info-list i {
+    color: #4c83f1;
+    margin-right: 10px;
+  }
+  
+  .info-list a {
+    color: #3b82f6;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  
+  .info-list span {
+    color: #111;
+    font-weight: 500;
+    margin-left: 4px;
+  }
+  
+  .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    font-size: 14px;
+  }
+  
+  /* BUTTONS */
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 25px;
+  }
+  
+  button {
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  
+  .btn-danger {
+    background: #fca5a5;
+    color: #a70000;
+  }
+  
+  .btn-danger:hover {
+    background: #f87171;
+  }
+  
+  .btn-outline {
+    background: #f1f5f9;
+    color: #333;
+  }
+  
+  .btn-outline:hover {
+    background: #e2e8f0;
+  }
+  

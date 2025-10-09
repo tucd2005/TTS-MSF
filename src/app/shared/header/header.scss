@@ -10,10 +10,6 @@ i {
 header {
   box-shadow: 0 4px 4px #aaaaaa;
   position: relative;
-  // position: sticky;
-  // top: 0;
-  // z-index: 100;
-  // background: #fff;
 }
 
 .header {
@@ -32,13 +28,6 @@ header {
   margin-left: -70px;
 }
 
-.action {
-  display: flex;
-  justify-content: flex-end;
-  gap: 15px;
-  align-items: center;
-}
-
 /* Menu */
 .header-main ul {
   display: flex;
@@ -50,7 +39,7 @@ header {
 
 .header-main ul li {
   list-style: none;
-  padding: 2px 7px; /* thu nhỏ padding */
+  padding: 2px 7px;
   transition: background 0.3s, color 0.3s;
   border-radius: 10px;
 }
@@ -78,42 +67,118 @@ header {
 }
 
 /* Action Items */
-.action__option {
-  border: 1px solid #ffffff;
-  padding: 50px 10px;
-  border-radius: 5px;
-}
-
-.header-icon {
-  padding: 5px;
-}
-.select__language {
+.action {
   display: flex;
-  justify-content: center;
   align-items: center;
-}
+  gap: 20px;
+  position: relative;
 
-.img__language {
-  width: 23px;
-}
-
-.profile {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .img__header {
-    max-width: 200px;
+  i.fa-bell {
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
   }
-  .header {
-    padding: 0 15px;
+
+  .select__language {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+
+    .img__language {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+    }
+
+    i {
+      font-size: 14px;
+      color: #555;
+    }
   }
-  .header-main ul {
-    gap: 15px;
+
+  /* === Avatar Dropdown Fix Hover === */
+  .profile__menu {
+    position: relative;
+    display: inline-block;
+
+    .profile {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all 0.2s ease;
+
+      &:hover {
+        border-color: #2ecc71;
+      }
+    }
+
+    .dropdown {
+      position: absolute;
+      right: 0;
+      top: 100%;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      list-style: none;
+      padding: 8px 0;
+      margin: 0;
+      width: 160px;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-5px);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      z-index: 999;
+
+      /* ✅ Giữ hover mượt - buffer zone */
+      &::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background: transparent;
+      }
+
+      li a {
+        display: block;
+        padding: 10px 16px;
+        color: #333;
+        text-decoration: none;
+        transition: 0.2s;
+
+        &:hover {
+          background: #2ecc71;
+          color: #fff;
+        }
+      }
+
+      li + li {
+        border-top: 1px solid #f2f2f2;
+      }
+    }
+
+    /* ✅ Hover avatar hoặc menu đều mở */
+    &:hover .dropdown,
+    .dropdown:hover {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Hiệu ứng mượt */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
