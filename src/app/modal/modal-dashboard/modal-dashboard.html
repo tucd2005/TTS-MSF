@@ -22,32 +22,71 @@
                 Hãy bắt đầu đăng dự án, thông báo đến mọi người nhé
             </p>
 
-            <form class="upload-form">
-                <input type="text" placeholder="Tên dự án" />
-                <input type="text" placeholder="Mã nhúng" />
-                <a href="#" class="get-code">Hướng dẫn lấy mã nhúng</a>
-                <input type="text" placeholder="Tags" />
+            <form class="upload-form" (ngSubmit)="handleSubmit()" >
+                <ng-container *ngIf="activeTab === 'project'; 
+                else noticeForm">
+                    <input type="text" 
+                    placeholder="Ten du an" 
+                        [(ngModel)] = "projectTitle"
+                        name="projectTitle"
+                    />
 
-                <div class="thumbnail-upload">
-                    <label>
-                        <img src="thumnal.png" alt=""> Ảnh thumbnail dự án
-                    </label>
-                    <img src="thumnail-right.jpg" alt="">
-                </div>
+                    <input type="text" placeholder="Ma nhung" [(ngModel)]="embedCode" name="embedCode"/>
+                    <a href="#" class="get-code">Huogn dan lay ma nhung</a>
 
-                <div class="editor">
-                    <img src="textarear.png" alt="">
-                </div>
-                <div class="btn-submit">
+                    <input type="text" 
+                        placeholder="Tags( vi du: hoc tap, react, nodejs)"
+                        [(ngModel)]="tags"
+                        name="tags"
+                    />
 
-                    <app-button>Đăng dự án</app-button>
-                </div>
+          <!-- Upload thumbnail -->
+          <div class="thumbnail-upload">
+            <label for="imageUpload">Ảnh thumbnail dự án</label>
+            <input type="file" id="imageUpload" (change)="handleImageUpload($event)" />
+        
+            <!-- Hiển thị preview -->
+            <img *ngIf="previewImage" [src]="previewImage" alt="preview" />
+          </div>
 
-                <p class="help-text">
-                    Bạn chưa biết đăng dự án?
-                    <a href="#">Xem hướng dẫn ở đây nhé</a>
-                </p>
-            </form>
-        </div>
+          <!-- Nội dung -->
+          <div class="editor">
+            <textarea
+              [(ngModel)]="content"
+              name="content"
+              placeholder="Nhập nội dung mô tả dự án của bạn..."
+              rows="6"
+              class="textarea"
+            ></textarea>
+          </div>
+
+          <!-- Submit -->
+          <div class="btn-submit">
+            <app-button type="submit">Đăng dự án</app-button>
+          </div>
+        </ng-container>
+
+        <!-- Template cho tab Thông báo -->
+        <ng-template #noticeForm>
+          <div class="editor">
+            <textarea
+              [(ngModel)]="content"
+              name="noticeContent"
+              placeholder="Nhập nội dung thông báo..."
+              rows="6"
+              class="textarea"
+            ></textarea>
+          </div>
+          <div class="btn-submit">
+            <app-button type="submit">Đăng thông báo</app-button>
+          </div>
+        </ng-template>
+
+        <p class="help-text">
+          Bạn chưa biết đăng dự án?
+          <a href="#">Xem hướng dẫn ở đây nhé</a>
+        </p>
+      </form>
     </div>
+  </div>
 </div>

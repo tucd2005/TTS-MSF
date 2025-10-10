@@ -1,194 +1,89 @@
 <div class="dashboard">
-    <div class="dashboard__menu">
-        <h2>Nhóm cộng đồng</h2>
-        <div class="list__menu">
-            <ul>
-                <li>
-                    <a href="#">Toàn bộ</a>
-                </li>
-                <li>
-
-                    <a href="#">Đội quân nhí nhố</a>
-                </li>
-                <li>
-
-                    <a href="#">Đội quân nhí nhố</a>
-                </li>
-                <li>
-
-                    <a href="#">Đội quân nhí nhố</a>
-                </li>
-                <li>
-
-                    <a href="#">Đội quân nhí nhố</a>
-                </li>
-                <li>
-
-                    <a href="#">Đội quân nhí nhố</a>
-                </li>
-                <li>
-
-                    <a href="#">Đội quân nhí nhố</a>
-                </li>
-                <li>
-
-                    <a href="#">Đội quân nhí nhố</a>
-                </li>
-
-            </ul>
-            <div class="xem-them">
-                Xem thêm<i class="fa-solid fa-arrow-right-long"></i>
-            </div>
-        </div>
-
-        <hr style="width: 210px; margin: 50px 0 50px 0;">
-
-        <div class="featured__topics">
-            <h2>Chủ đề nổi bật</h2>
-            <div class="featured__topics__bottom">
-                <ul>
-                    <li>
-
-                        <a href="">#classroom hub</a>
-                    </li>
-                    <li>
-
-                        <a href="">#classroom hub</a>
-                    </li>
-                    <li>
-
-                        <a href="">#classroom hub</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+  <div class="dashboard__menu">
+    <h2>Nhóm cộng đồng</h2>
+    <div class="list__menu">
+      <ul>
+        <li>
+          <a href="#">Toàn bộ</a>
+        </li>
+        <li>
+          <a href="#">Đội quân nhí nhố</a>
+        </li>
+        <li>
+          <a href="#">Đội quân nhí nhố</a>
+        </li>
+        <li>
+          <a href="#">Đội quân nhí nhố</a>
+        </li>
+        <li>
+          <a href="#">Đội quân nhí nhố</a>
+        </li>
+        <li>
+          <a href="#">Đội quân nhí nhố</a>
+        </li>
+        <li>
+          <a href="#">Đội quân nhí nhố</a>
+        </li>
+        <li>
+          <a href="#">Đội quân nhí nhố</a>
+        </li>
+      </ul>
+      <div class="xem-them">Xem thêm<i class="fa-solid fa-arrow-right-long"></i></div>
     </div>
 
-    <div class="dashboard__content">
-        <div class="search-box">
-            <img src="avatar.png" alt="avatar" class="avatar" />
-            <input type="text" placeholder="Bạn muốn đăng gì?" readonly (click)="openModal()" />
-            <span>
-                <i class="fa-solid fa-magnifying-glass icon-search"></i>
-            </span>
-        </div>
+    <hr style="width: 210px; margin: 50px 0 50px 0" />
 
-        <!-- GỌI COMPONENT MODAL -->
-        <app-modal-dashboard [isOpen]="isModalOpen" (close)="closeModal()"></app-modal-dashboard>
+    <div class="featured__topics">
+      <h2>Chủ đề nổi bật</h2>
+      <div class="featured__topics__bottom">
+        <ul>
+          <li>
+            <a href="">#classroom hub</a>
+          </li>
+          <li>
+            <a href="">#classroom hub</a>
+          </li>
+          <li>
+            <a href="">#classroom hub</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-        <div class="post-card">
-            <div class="post-header">
-                <img src="avt-blog.jpg" alt="avatar" class="avatar__post">
-                <div class="user-info">
-                    <h4 class="username">Ngọc Nhung</h4>
-                    <span class="time">12 giờ trước</span>
-                </div>
-                <div class="options">⋯</div>
-            </div>
-
-            <div class="post-content">
-                <p>
-                    Một bài toán khó trong danh sách các bài mà Hồng lựa chọn để tập huấn cho các em học sinh khóa
-                    <br>dưới như sau:<br> Cho hai số nguyên dương<br>n,tn,t,cần tìm một bộ gồm ít số nguyên dương nhất,
-                    giả sử bộ tìm được gồm<br>kk số nguyên dương a1,a2,...,aka 1,a2,...,ak <br>thì:
-                    (a1+t)×(a2+t)×...×(ak+t)=n×a1×a2×...×ak.(a1+t)×(a2+t)×...×(ak+t)=n×a1×a2×...×ak ​ <br><br>. Yêu cầu:
-                    Cho 22 số nguyên dương n,tn,t, hãy tìm số nguyên dương kk thoả mãn. <br> Input <br> Vào từ thiết bị
-                    vào chuẩn gồm một dòng chứa hai số nguyên n,t(n,t≤1000)n,t(n,t≤1000) <br> Output <br> Ghi ra thiết
-                    bị ra chuẩn gồm một dòng chứa số nguyên kk là số lượng số ít nhất để tồn tại bộ gồm kk số nguyên
-                    dương thoả mãn, nếu <br> không tồn tại ghi số −1−1. <br>Example
-                </p>
-
-            </div>
-
-            <div class="post-image">
-                <img src="img-post-dasboard.jpg" alt="coffee">
-            </div>
-        </div>
-        <div class="post-card">
-            <div class="post-header">
-                <img src="avt-blog.jpg" alt="avatar" class="avatar__post">
-                <div class="user-info">
-                    <h4 class="username">Ngọc Nhung</h4>
-                    <span class="time">12 giờ trước</span>
-                </div>
-                <div class="options">⋯</div>
-            </div>
-
-            <div class="post-content">
-                <p>
-                    Một bài toán khó trong danh sách các bài mà Hồng lựa chọn để tập huấn cho các em học sinh khóa
-                    <br>dưới như sau:<br> Cho hai số nguyên dương<br>n,tn,t,cần tìm một bộ gồm ít số nguyên dương nhất,
-                    giả sử bộ tìm được gồm<br>kk số nguyên dương a1,a2,...,aka 1,a2,...,ak <br>thì:
-                    (a1+t)×(a2+t)×...×(ak+t)=n×a1×a2×...×ak.(a1+t)×(a2+t)×...×(ak+t)=n×a1×a2×...×ak ​ <br><br>. Yêu cầu:
-                    Cho 22 số nguyên dương n,tn,t, hãy tìm số nguyên dương kk thoả mãn. <br> Input <br> Vào từ thiết bị
-                    vào chuẩn gồm một dòng chứa hai số nguyên n,t(n,t≤1000)n,t(n,t≤1000) <br> Output <br> Ghi ra thiết
-                    bị ra chuẩn gồm một dòng chứa số nguyên kk là số lượng số ít nhất để tồn tại bộ gồm kk số nguyên
-                    dương thoả mãn, nếu <br> không tồn tại ghi số −1−1. <br>Example
-                </p>
-
-            </div>
-
-            <div class="post-image">
-                <img src="img-post-dasboard.jpg" alt="coffee">
-            </div>
-        </div>
-        <div class="post-card">
-            <div class="post-header">
-                <img src="avt-blog.jpg" alt="avatar" class="avatar__post">
-                <div class="user-info">
-                    <h4 class="username">Ngọc Nhung</h4>
-                    <span class="time">12 giờ trước</span>
-                </div>
-                <div class="options">⋯</div>
-            </div>
-
-            <div class="post-content">
-                <p>
-                    Một bài toán khó trong danh sách các bài mà Hồng lựa chọn để tập huấn cho các em học sinh khóa
-                    <br>dưới như sau:<br> Cho hai số nguyên dương<br>n,tn,t,cần tìm một bộ gồm ít số nguyên dương nhất,
-                    giả sử bộ tìm được gồm<br>kk số nguyên dương a1,a2,...,aka 1,a2,...,ak <br>thì:
-                    (a1+t)×(a2+t)×...×(ak+t)=n×a1×a2×...×ak.(a1+t)×(a2+t)×...×(ak+t)=n×a1×a2×...×ak ​ <br><br>. Yêu cầu:
-                    Cho 22 số nguyên dương n,tn,t, hãy tìm số nguyên dương kk thoả mãn. <br> Input <br> Vào từ thiết bị
-                    vào chuẩn gồm một dòng chứa hai số nguyên n,t(n,t≤1000)n,t(n,t≤1000) <br> Output <br> Ghi ra thiết
-                    bị ra chuẩn gồm một dòng chứa số nguyên kk là số lượng số ít nhất để tồn tại bộ gồm kk số nguyên
-                    dương thoả mãn, nếu <br> không tồn tại ghi số −1−1. <br>Example
-                </p>
-
-            </div>
-
-            <div class="post-image">
-                <img src="img-post-dasboard.jpg" alt="coffee">
-            </div>
-        </div>
-        <div class="post-card">
-            <div class="post-header">
-                <img src="avt-blog.jpg" alt="avatar" class="avatar__post">
-                <div class="user-info">
-                    <h4 class="username">Ngọc Nhung</h4>
-                    <span class="time">12 giờ trước</span>
-                </div>
-                <div class="options">⋯</div>
-            </div>
-
-            <div class="post-content">
-                <p>
-                    Một bài toán khó trong danh sách các bài mà Hồng lựa chọn để tập huấn cho các em học sinh khóa
-                    <br>dưới như sau:<br> Cho hai số nguyên dương<br>n,tn,t,cần tìm một bộ gồm ít số nguyên dương nhất,
-                    giả sử bộ tìm được gồm<br>kk số nguyên dương a1,a2,...,aka 1,a2,...,ak <br>thì:
-                    (a1+t)×(a2+t)×...×(ak+t)=n×a1×a2×...×ak.(a1+t)×(a2+t)×...×(ak+t)=n×a1×a2×...×ak ​ <br><br>. Yêu cầu:
-                    Cho 22 số nguyên dương n,tn,t, hãy tìm số nguyên dương kk thoả mãn. <br> Input <br> Vào từ thiết bị
-                    vào chuẩn gồm một dòng chứa hai số nguyên n,t(n,t≤1000)n,t(n,t≤1000) <br> Output <br> Ghi ra thiết
-                    bị ra chuẩn gồm một dòng chứa số nguyên kk là số lượng số ít nhất để tồn tại bộ gồm kk số nguyên
-                    dương thoả mãn, nếu <br> không tồn tại ghi số −1−1. <br>Example
-                </p>
-            </div>
-
-            <div class="post-image">
-                <img src="img-post-dasboard.jpg" alt="coffee">
-            </div>
-        </div>
-
+  <div class="dashboard__content">
+    <div class="search-box">
+      <img src="avatar.png" alt="avatar" class="avatar" />
+      <input type="text" placeholder="Bạn muốn đăng gì?" readonly (click)="openModal()" />
+      <span>
+        <i class="fa-solid fa-magnifying-glass icon-search"></i>
+      </span>
     </div>
 
+    <!-- GỌI COMPONENT MODAL -->
+    <app-modal-dashboard
+      [isOpen]="isModalOpen"
+      (close)="closeModal()"
+      (submitPost)="addPost($event)"
+    >
+    </app-modal-dashboard>
 
+    <div class="post-card" *ngFor="let post of posts">
+      <div class="post-header">
+        <div class="user-info">
+          <h4 class="username">{{ post.username }}</h4>
+          <span class="time">{{ post.time }}</span>
+        </div>
+        <div class="options" (click)="deletePost(post.id!)">⋯</div>
+      </div>
+
+      <div class="post-content">
+        <p>{{ post.content }}</p>
+      </div>
+
+      <div class="post-image" *ngIf="post.image">
+        <img [src]="post.image" alt="image" />
+      </div>
+    </div>
+  </div>
 </div>
