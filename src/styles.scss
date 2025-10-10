@@ -8,7 +8,7 @@
 
 .font-baloo {
   font-family: 'Baloo Tammudu', Arial, sans-serif;
-  color: #5dc2a7;
+  color: var(--color-primary);
   text-align: center;
 }
 
@@ -44,8 +44,14 @@ ul {
   font-weight: 400; /* Cực kỳ quan trọng để icon Regular (rỗng) hiển thị */
 }
 
+:root {
+  --color-primary: #5dc2a7;
+  --color-background: #f2f6fe;
 
+  --color-orange: #fe924f;
 
-:root{
-  
+  --color-black: #000000;
+  --color-yellow: #ffde59;
+  --color-white: #ffffff;
+  --color-sidebar: #2a3862;
 }
