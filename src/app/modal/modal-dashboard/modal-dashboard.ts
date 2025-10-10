@@ -3,8 +3,8 @@ import { Button } from "../../shared/button/button";
 
 @Component({
   selector: 'app-modal-dashboard',
-  standalone: true,
   imports: [Button],
+  standalone: true,
   templateUrl: './modal-dashboard.html',
   styleUrl: './modal-dashboard.scss'
 })
