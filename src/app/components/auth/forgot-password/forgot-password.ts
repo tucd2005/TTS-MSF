@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { Button } from "../../../shared/button/button";
 
 @Component({
   selector: 'app-forgot-password',
   standalone: true,
-  imports: [RouterLink, Button],
+  imports: [RouterOutlet],
   templateUrl: './forgot-password.html',
   styleUrl: './forgot-password.scss'
 })

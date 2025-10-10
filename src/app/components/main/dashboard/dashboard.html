@@ -66,14 +66,15 @@
 
     <div class="dashboard__content">
         <div class="search-box">
-            <img src="avatar.png" alt="avatar" class="avatar">
-            <input type="text" placeholder="Bạn muốn đăng gì?">
+            <img src="avatar.png" alt="avatar" class="avatar" />
+            <input type="text" placeholder="Bạn muốn đăng gì?" readonly (click)="openModal()" />
             <span>
-
-                <i class="fa-solid fa-magnifying-glass  icon-search"></i>
+                <i class="fa-solid fa-magnifying-glass icon-search"></i>
             </span>
         </div>
 
+        <!-- GỌI COMPONENT MODAL -->
+        <app-modal-dashboard [isOpen]="isModalOpen" (close)="closeModal()"></app-modal-dashboard>
 
         <div class="post-card">
             <div class="post-header">
@@ -87,7 +88,14 @@
 
             <div class="post-content">
                 <p>
-                    Một bài toán khó trong danh sách các bài mà Hồng lựa chọn để tập huấn cho các em học sinh khóa <br>dưới như sau:<br> Cho hai số nguyên dương<br>n,tn,t,cần tìm một bộ gồm ít số nguyên dương nhất, giả sử bộ tìm được gồm<br>kk số nguyên dương a1,a2,...,aka 1,a2,...,ak <br>thì: (a1+t)×(a2+t)×...×(ak+t)=n×a1×a2×...×ak.(a1+t)×(a2+t)×...×(ak+t)=n×a1×a2×...×ak ​ <br><br>. Yêu cầu: Cho 22 số nguyên dương n,tn,t, hãy tìm số nguyên dương kk thoả mãn. <br> Input <br> Vào từ thiết bị vào chuẩn gồm một dòng chứa hai số nguyên n,t(n,t≤1000)n,t(n,t≤1000) <br> Output <br> Ghi ra thiết bị ra chuẩn gồm một dòng chứa số nguyên kk là số lượng số ít nhất để tồn tại bộ gồm kk số nguyên dương thoả mãn, nếu <br> không tồn tại ghi số −1−1. <br>Example
+                    Một bài toán khó trong danh sách các bài mà Hồng lựa chọn để tập huấn cho các em học sinh khóa
+                    <br>dưới như sau:<br> Cho hai số nguyên dương<br>n,tn,t,cần tìm một bộ gồm ít số nguyên dương nhất,
+                    giả sử bộ tìm được gồm<br>kk số nguyên dương a1,a2,...,aka 1,a2,...,ak <br>thì:
+                    (a1+t)×(a2+t)×...×(ak+t)=n×a1×a2×...×ak.(a1+t)×(a2+t)×...×(ak+t)=n×a1×a2×...×ak ​ <br><br>. Yêu cầu:
+                    Cho 22 số nguyên dương n,tn,t, hãy tìm số nguyên dương kk thoả mãn. <br> Input <br> Vào từ thiết bị
+                    vào chuẩn gồm một dòng chứa hai số nguyên n,t(n,t≤1000)n,t(n,t≤1000) <br> Output <br> Ghi ra thiết
+                    bị ra chuẩn gồm một dòng chứa số nguyên kk là số lượng số ít nhất để tồn tại bộ gồm kk số nguyên
+                    dương thoả mãn, nếu <br> không tồn tại ghi số −1−1. <br>Example
                 </p>
 
             </div>
@@ -108,7 +116,14 @@
 
             <div class="post-content">
                 <p>
-                    Một bài toán khó trong danh sách các bài mà Hồng lựa chọn để tập huấn cho các em học sinh khóa <br>dưới như sau:<br> Cho hai số nguyên dương<br>n,tn,t,cần tìm một bộ gồm ít số nguyên dương nhất, giả sử bộ tìm được gồm<br>kk số nguyên dương a1,a2,...,aka 1,a2,...,ak <br>thì: (a1+t)×(a2+t)×...×(ak+t)=n×a1×a2×...×ak.(a1+t)×(a2+t)×...×(ak+t)=n×a1×a2×...×ak ​ <br><br>. Yêu cầu: Cho 22 số nguyên dương n,tn,t, hãy tìm số nguyên dương kk thoả mãn. <br> Input <br> Vào từ thiết bị vào chuẩn gồm một dòng chứa hai số nguyên n,t(n,t≤1000)n,t(n,t≤1000) <br> Output <br> Ghi ra thiết bị ra chuẩn gồm một dòng chứa số nguyên kk là số lượng số ít nhất để tồn tại bộ gồm kk số nguyên dương thoả mãn, nếu <br> không tồn tại ghi số −1−1. <br>Example
+                    Một bài toán khó trong danh sách các bài mà Hồng lựa chọn để tập huấn cho các em học sinh khóa
+                    <br>dưới như sau:<br> Cho hai số nguyên dương<br>n,tn,t,cần tìm một bộ gồm ít số nguyên dương nhất,
+                    giả sử bộ tìm được gồm<br>kk số nguyên dương a1,a2,...,aka 1,a2,...,ak <br>thì:
+                    (a1+t)×(a2+t)×...×(ak+t)=n×a1×a2×...×ak.(a1+t)×(a2+t)×...×(ak+t)=n×a1×a2×...×ak ​ <br><br>. Yêu cầu:
+                    Cho 22 số nguyên dương n,tn,t, hãy tìm số nguyên dương kk thoả mãn. <br> Input <br> Vào từ thiết bị
+                    vào chuẩn gồm một dòng chứa hai số nguyên n,t(n,t≤1000)n,t(n,t≤1000) <br> Output <br> Ghi ra thiết
+                    bị ra chuẩn gồm một dòng chứa số nguyên kk là số lượng số ít nhất để tồn tại bộ gồm kk số nguyên
+                    dương thoả mãn, nếu <br> không tồn tại ghi số −1−1. <br>Example
                 </p>
 
             </div>
@@ -129,7 +144,14 @@
 
             <div class="post-content">
                 <p>
-                    Một bài toán khó trong danh sách các bài mà Hồng lựa chọn để tập huấn cho các em học sinh khóa <br>dưới như sau:<br> Cho hai số nguyên dương<br>n,tn,t,cần tìm một bộ gồm ít số nguyên dương nhất, giả sử bộ tìm được gồm<br>kk số nguyên dương a1,a2,...,aka 1,a2,...,ak <br>thì: (a1+t)×(a2+t)×...×(ak+t)=n×a1×a2×...×ak.(a1+t)×(a2+t)×...×(ak+t)=n×a1×a2×...×ak ​ <br><br>. Yêu cầu: Cho 22 số nguyên dương n,tn,t, hãy tìm số nguyên dương kk thoả mãn. <br> Input <br> Vào từ thiết bị vào chuẩn gồm một dòng chứa hai số nguyên n,t(n,t≤1000)n,t(n,t≤1000) <br> Output <br> Ghi ra thiết bị ra chuẩn gồm một dòng chứa số nguyên kk là số lượng số ít nhất để tồn tại bộ gồm kk số nguyên dương thoả mãn, nếu <br> không tồn tại ghi số −1−1. <br>Example
+                    Một bài toán khó trong danh sách các bài mà Hồng lựa chọn để tập huấn cho các em học sinh khóa
+                    <br>dưới như sau:<br> Cho hai số nguyên dương<br>n,tn,t,cần tìm một bộ gồm ít số nguyên dương nhất,
+                    giả sử bộ tìm được gồm<br>kk số nguyên dương a1,a2,...,aka 1,a2,...,ak <br>thì:
+                    (a1+t)×(a2+t)×...×(ak+t)=n×a1×a2×...×ak.(a1+t)×(a2+t)×...×(ak+t)=n×a1×a2×...×ak ​ <br><br>. Yêu cầu:
+                    Cho 22 số nguyên dương n,tn,t, hãy tìm số nguyên dương kk thoả mãn. <br> Input <br> Vào từ thiết bị
+                    vào chuẩn gồm một dòng chứa hai số nguyên n,t(n,t≤1000)n,t(n,t≤1000) <br> Output <br> Ghi ra thiết
+                    bị ra chuẩn gồm một dòng chứa số nguyên kk là số lượng số ít nhất để tồn tại bộ gồm kk số nguyên
+                    dương thoả mãn, nếu <br> không tồn tại ghi số −1−1. <br>Example
                 </p>
 
             </div>
@@ -150,7 +172,14 @@
 
             <div class="post-content">
                 <p>
-                    Một bài toán khó trong danh sách các bài mà Hồng lựa chọn để tập huấn cho các em học sinh khóa <br>dưới như sau:<br> Cho hai số nguyên dương<br>n,tn,t,cần tìm một bộ gồm ít số nguyên dương nhất, giả sử bộ tìm được gồm<br>kk số nguyên dương a1,a2,...,aka 1,a2,...,ak <br>thì: (a1+t)×(a2+t)×...×(ak+t)=n×a1×a2×...×ak.(a1+t)×(a2+t)×...×(ak+t)=n×a1×a2×...×ak ​ <br><br>. Yêu cầu: Cho 22 số nguyên dương n,tn,t, hãy tìm số nguyên dương kk thoả mãn. <br> Input <br> Vào từ thiết bị vào chuẩn gồm một dòng chứa hai số nguyên n,t(n,t≤1000)n,t(n,t≤1000) <br> Output <br> Ghi ra thiết bị ra chuẩn gồm một dòng chứa số nguyên kk là số lượng số ít nhất để tồn tại bộ gồm kk số nguyên dương thoả mãn, nếu <br> không tồn tại ghi số −1−1. <br>Example
+                    Một bài toán khó trong danh sách các bài mà Hồng lựa chọn để tập huấn cho các em học sinh khóa
+                    <br>dưới như sau:<br> Cho hai số nguyên dương<br>n,tn,t,cần tìm một bộ gồm ít số nguyên dương nhất,
+                    giả sử bộ tìm được gồm<br>kk số nguyên dương a1,a2,...,aka 1,a2,...,ak <br>thì:
+                    (a1+t)×(a2+t)×...×(ak+t)=n×a1×a2×...×ak.(a1+t)×(a2+t)×...×(ak+t)=n×a1×a2×...×ak ​ <br><br>. Yêu cầu:
+                    Cho 22 số nguyên dương n,tn,t, hãy tìm số nguyên dương kk thoả mãn. <br> Input <br> Vào từ thiết bị
+                    vào chuẩn gồm một dòng chứa hai số nguyên n,t(n,t≤1000)n,t(n,t≤1000) <br> Output <br> Ghi ra thiết
+                    bị ra chuẩn gồm một dòng chứa số nguyên kk là số lượng số ít nhất để tồn tại bộ gồm kk số nguyên
+                    dương thoả mãn, nếu <br> không tồn tại ghi số −1−1. <br>Example
                 </p>
             </div>
 
@@ -161,19 +190,5 @@
 
     </div>
 
-    
-</div>
 
-    <!-- Nút mở modal -->
-<a href="#modal" class="open-modal-btn">Tạo bài viết mới</a>
-
-<!-- Modal -->
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <a href="#" class="close">&times;</a>
-    <h2>Tạo bài viết</h2>
-    <p>Nhập nội dung của bạn vào đây...</p>
-    <textarea rows="4" placeholder="Bạn muốn chia sẻ điều gì?"></textarea>
-    <button class="btn-submit">Đăng bài</button>
-  </div>
 </div>

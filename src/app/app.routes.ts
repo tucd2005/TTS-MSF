@@ -18,6 +18,9 @@ import { ThongBaoThanhCong } from './components/auth/thong-bao-thanh-cong/thong-
 import { AdminDashboard } from './components/main/admin-dashboard/admin-dashboard';
 import { Profile } from './components/main/profile/profile';
 import { LopHocTrongBaiTap } from './components/main/lop-hoc-trong-bai-tap/lop-hoc-trong-bai-tap';
+import { Step1Email } from './components/auth/forgot-password/step-1-email/step-1-email';
+import { Step2Verify } from './components/auth/forgot-password/step-2-verify/step-2-verify';
+import { Step3Reset } from './components/auth/forgot-password/step-3-reset/step-3-reset';
 
 export const routes: Routes = [
     // { path: "home", component: Home },
@@ -42,15 +45,23 @@ export const routes: Routes = [
 
         ]
     },
-
+    
     {
         path: 'auth',
         component: AuthLayout,
         children: [
             { path: "register", component: Register },
             { path: "login", component: Login },
-            { path: "forgot-password", component: ForgotPassword },
-            { path: "change-password", component: ChangePassword },
+            {
+                path: "forgot-password",
+                component: ForgotPassword,
+                children: [
+                    { path: "", redirectTo: "email", pathMatch: "full" },
+                    { path: "email", component: Step1Email },
+                    { path: "verify", component: Step2Verify },
+                    { path: "reset", component: Step3Reset },
+                ]
+            },
         ]
     }
 ];

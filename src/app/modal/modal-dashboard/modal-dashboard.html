@@ -1,1 +1,53 @@
-<p>modal-dashboard works!</p>
+<div class="upload-modal" [class.show]="isOpen">
+    <div class="modal-wrapper">
+        <button class="close-btn" (click)="handleClose()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="modal-container">
+            <h2 class="title font-baloo">Tải lên</h2>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <button [class.active]="activeTab === 'project'" (click)="activeTab = 'project'">
+                    Dự án, bài tập
+                </button>
+                <button [class.active]="activeTab === 'notice'" (click)="activeTab = 'notice'">
+                    Thông báo
+                </button>
+            </div>
+
+            <p class="welcome">
+                Xin chào bạn!<br />
+                Hãy bắt đầu đăng dự án, thông báo đến mọi người nhé
+            </p>
+
+            <form class="upload-form">
+                <input type="text" placeholder="Tên dự án" />
+                <input type="text" placeholder="Mã nhúng" />
+                <a href="#" class="get-code">Hướng dẫn lấy mã nhúng</a>
+                <input type="text" placeholder="Tags" />
+
+                <div class="thumbnail-upload">
+                    <label>
+                        <img src="thumnal.png" alt=""> Ảnh thumbnail dự án
+                    </label>
+                    <img src="thumnail-right.jpg" alt="">
+                </div>
+
+                <div class="editor">
+                    <img src="textarear.png" alt="">
+                </div>
+                <div class="btn-submit">
+
+                    <app-button>Đăng dự án</app-button>
+                </div>
+
+                <p class="help-text">
+                    Bạn chưa biết đăng dự án?
+                    <a href="#">Xem hướng dẫn ở đây nhé</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
