@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ModalSuccess } from "../../../modal/modal-success/modal-success";
 
 @Component({
   selector: 'app-bai-tap',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ModalSuccess],
   templateUrl: './bai-tap.html',
   styleUrls: ['./bai-tap.scss'],
 })
@@ -78,5 +79,12 @@ export class BaiTap {
 
 activeTab: 'project' | 'notice' = 'project';
 
+  showModal = false;
+  openModal() {
+    this.showModal =true;
+  }
+  closeModal() {
+    this.showModal =false
+  }
 
 }

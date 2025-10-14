@@ -1,0 +1,46 @@
+<main class="student-page">
+  <!-- Sidebar -->
+
+ <div class="left__side__bar">
+    <ul>
+      <li>Tất cả</li>
+      <li>Danh sách</li>
+    </ul>
+  </div>
+  <!-- Main content -->
+  <section class="content">
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th></th>
+            <th>Tên đăng nhập</th>
+            <th>Năm sinh</th>
+            <th>Số điện thoại</th>
+            <th>Phụ huynh</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of students; index as i">
+            <td>{{ i + 1 }}</td>
+            <td class="avatar">
+
+                <img [src]="student.avatar" alt="avatar" />
+            </td>
+            <td class="user-cell">
+              <div class="user-info">
+                <span class="username">{{ student.username }}</span>
+                <small>{{ student.fullname }}</small>
+              </div>
+            </td>
+            <td>{{ student.birthYear }}</td>
+            <td>{{ student.phone }}</td>
+            <td>{{ student.parent }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>

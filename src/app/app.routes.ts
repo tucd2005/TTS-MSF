@@ -25,6 +25,9 @@ import { PopupRegister } from './components/auth/popup-register/popup-register';
 import { ModalHoctap } from './modal/modal-hoctap/modal-hoctap';
 import { LopHocTrongLopHoc } from './components/main/lop-hoc-trong-lop-hoc/lop-hoc-trong-lop-hoc';
 import { BaiTap } from './components/main/bai-tap/bai-tap';
+import { Teacher } from './components/main/teacher/teacher';
+import { ListClass } from './components/main/list-class/list-class';
+import { ListStudent } from './components/main/list-student/list-student';
 
 export const routes: Routes = [
   // { path: "home", component: Home },
@@ -49,7 +52,10 @@ export const routes: Routes = [
       { path: 'profile', component: Profile },
       { path: 'lop-hoc', component: LopHocTrongBaiTap },
       { path: 'bai-tap', component: BaiTap },
-      { path: 'class-of-class', component: LopHocTrongLopHoc},
+      { path: 'class-of-class', component: LopHocTrongLopHoc },
+      { path: 'profile-teacher', component: Teacher },
+      { path: 'list-class', component: ListClass },
+      { path: 'list-student', component: ListStudent },
     ],
   },
 

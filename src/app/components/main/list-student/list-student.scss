@@ -1,0 +1,116 @@
+.student-page {
+  display: flex;
+  background: #f5f7fb;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+.left__side__bar {
+  flex: 0 0 160px;
+  background: transparent;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 8px; // khoảng cách giữa chấm và chữ
+      margin: 10px 0;
+      font-size: 16px;
+      color: #000;
+      cursor: pointer;
+      padding: 8px 14px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      font-weight: 700;
+
+      // chấm tròn
+      &::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background-color: #36c28c;
+        border-radius: 50%;
+        flex-shrink: 0;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        background: #fff;
+        color: #ffa803;
+      }
+
+      &.active {
+        background: #fff;
+        color: #ffa803;
+        font-weight: bold;
+      }
+    }
+  }
+}
+/* ========== Main content ========== */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+//   padding: 20px 40px;
+}
+
+/* Table */
+.table-container {
+ background: #fff;
+    border-radius: 16px;
+    /* margin-top: 24px; */
+    padding: 20px;
+    margin-left: 55px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+      text-align: left;
+      color: #555;
+      font-weight: 600;
+      padding: 12px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    td {
+      padding: 12px;
+      border-bottom: 1px solid #f1f1f1;
+      color: #333;
+      vertical-align: middle;
+    }
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .user-cell {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+
+      .user-info {
+        display: flex;
+        flex-direction: column;
+
+        .username {
+          font-weight: 600;
+          color: #2563eb;
+        }
+
+        small {
+          color: #666;
+        }
+      }
+    }
+  }
+}

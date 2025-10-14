@@ -1,0 +1,183 @@
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left__side__bar {
+  flex: 0 0 160px;
+  background: transparent;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 8px; // khoảng cách giữa chấm và chữ
+      margin: 10px 0;
+      font-size: 16px;
+      color: #000;
+      cursor: pointer;
+      padding: 8px 14px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      font-weight: 700;
+
+      // chấm tròn
+      &::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background-color: #36c28c;
+        border-radius: 50%;
+        flex-shrink: 0;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        background: #fff;
+        color: #ffa803;
+      }
+
+      &.active {
+        background: #fff;
+        color: #ffa803;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.main-content {
+  width: 700px;
+}
+
+/* Header */
+.class-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+
+  .search-box {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 999px;
+    padding: 8px 16px;
+    width: 550px;
+    border: 1px solid gray;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+    i {
+      color: #aaa;
+      font-size: 16px;
+    }
+
+    input {
+      border: none;
+      outline: none;
+      background: transparent;
+      margin-left: 8px;
+      width: 100%;
+      font-size: 14px;
+      color: #333;
+    }
+  }
+
+  .btn-add {
+    background: #22c55e;
+    color: #fff;
+    border: none;
+    padding: 8px 30px;
+    border-radius: 999px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: #16a34a;
+    }
+  }
+}
+
+/* Danh sách lớp */
+.class-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .class-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-radius: 16px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+    .class-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .class-info {
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+          font-size: 20px;
+          font-weight: 600;
+          color: #2563eb;
+          margin: 0;
+        }
+
+        p {
+          font-size: 13px;
+          color: #555;
+        }
+
+        span {
+          font-size: 13px;
+          color: #888;
+        }
+
+        .item-info {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding-top: 7px;
+        }
+      }
+    }
+
+    .btn-detail {
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background: #1e40af;
+      }
+    }
+  }
+}
+
+.right-side {
+  position: relative;
+  top: -75px;
+}

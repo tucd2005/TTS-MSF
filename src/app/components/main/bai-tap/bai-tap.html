@@ -64,8 +64,11 @@
       </div>
     </div>
     <div class="action-buttons">
-      <button class="btn-submit">Nộp bài</button>
+      <button class="btn-submit" (click)="openModal()" >Nộp bài</button>
       <button class="btn-view">Xem đáp án</button>
     </div>
   </div>
+  <app-modal-success [isOpen]="showModal" (closed)="closeModal()"></app-modal-success>
 </div>
+
+

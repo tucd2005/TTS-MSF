@@ -1,0 +1,44 @@
+<main class="class-main">
+  <!-- Header: Tìm kiếm + Thêm lớp -->
+  <div class="left__side__bar">
+    <ul>
+      <li>Tất cả</li>
+      <li>Danh sách</li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <div class="class-header">
+      <div class="search-box">
+        <input type="text" placeholder="Tìm kiếm" />
+        <i class="fa fa-search"></i>
+      </div>
+      <button class="btn-add">Thêm lớp +</button>
+    </div>
+
+    <!-- Danh sách lớp -->
+    <div class="class-list">
+      <div class="class-item" *ngFor="let cls of listClass">
+        <div class="class-left">
+          <img [src]="cls.image" alt="class" />
+          <div class="class-info">
+            <h3>{{ cls.name }}</h3>
+            <div class="item-info">
+              <div style="display: flex; align-items: center; gap: 5px">
+                <i class="fa-solid fa-circle-user"  style="font-size: 11px;"></i>
+                <p>{{ cls.teacher }}</p>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 5px">
+                <i class="fa-regular fa-clock" style="font-size: 10px;"></i>
+                <span>{{ cls.time }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn-detail">Xem chi tiết</button>
+      </div>
+    </div>
+  </div>
+
+  <app-remind class="right-side"></app-remind>
+</main>
