@@ -1,0 +1,157 @@
+@charset "UTF-8";
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Baloo 2", sans-serif;
+}
+
+body {
+  background-color: #f5f7fb;
+}
+
+/* LAYOUT 3 CỘT */
+.document {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* ========== LEFT SIDEBAR ========== */
+/* ========== MAIN CONTENT ========== */
+.main_content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 900px; /* không vượt quá 900px */
+  min-width: 600px; /* không nhỏ hơn 600px */
+  margin: 0 auto;
+  position: relative;
+  left: 20px;
+}
+
+/* Card grid */
+.cart__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.cart__items {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(33, 33, 33, 0.05);
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.cart__items:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(33, 33, 33, 0.08);
+}
+
+.cart__items img {
+  width: 100%;
+  height: 130px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.info__items {
+  padding: 12px;
+}
+
+.name__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name__items h4 {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.anh-long-anh {
+  display: flex;
+  gap: 2px;
+}
+
+.anh-long-anh img {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 2px solid #fff;
+  margin-left: -10px;
+}
+
+.info__time {
+  font-size: 10px;
+  color: #777;
+  margin: 8px 0;
+}
+
+.info__items button {
+  background: #36c28c;
+  color: #fff;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.info__items button:hover {
+  background: #2fa178;
+}
+
+.left__side__bar {
+  flex: 0 0 180px;
+}
+
+.main_content {
+  flex: 0 0 700px; /* 👈 cố định độ rộng */
+}
+
+.right-side {
+  flex: 0 0 250px;
+}
+
+.right-side {
+  position: relative;
+  top: -75px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  gap: 8px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.pagination button {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.pagination button.active {
+  background: #67c4b3;
+  color: white;
+  border-color: #67c4b3;
+}
+
+.pagination button:hover {
+  background: #f0f0f0;
+}/*# sourceMappingURL=documents.css.map */

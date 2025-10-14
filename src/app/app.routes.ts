@@ -23,6 +23,8 @@ import { Step2Verify } from './components/auth/forgot-password/step-2-verify/ste
 import { Step3Reset } from './components/auth/forgot-password/step-3-reset/step-3-reset';
 import { PopupRegister } from './components/auth/popup-register/popup-register';
 import { ModalHoctap } from './modal/modal-hoctap/modal-hoctap';
+import { LopHocTrongLopHoc } from './components/main/lop-hoc-trong-lop-hoc/lop-hoc-trong-lop-hoc';
+import { BaiTap } from './components/main/bai-tap/bai-tap';
 
 export const routes: Routes = [
   // { path: "home", component: Home },
@@ -46,6 +48,8 @@ export const routes: Routes = [
       { path: 'exercise', component: Exercises },
       { path: 'profile', component: Profile },
       { path: 'lop-hoc', component: LopHocTrongBaiTap },
+      { path: 'bai-tap', component: BaiTap },
+      { path: 'class-of-class', component: LopHocTrongLopHoc},
     ],
   },
 

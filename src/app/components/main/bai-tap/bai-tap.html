@@ -1,0 +1,71 @@
+<div class="bai-tap">
+  <div class="baitap-left">
+    <div class="baitap-inner">
+      <div class="cauhoi-box" *ngFor="let q of questions; let i = index">
+        <div class="cauhoi">
+          {{ q.text }}
+        </div>
+        <div class="dapan">
+          <label *ngFor="let ans of q.answers" class="dapan{{ ans.key }}">
+            <input type="radio" [name]="'cau' + q.id" />
+            <span class="option">{{ ans.key }}</span>
+            <span class="text">{{ ans.text }}</span>
+          </label>
+        </div>
+      </div>
+      <div class="pagination">
+        <button><i class="fa-solid fa-angles-left"></i></button>
+        <button class="active">Trước tiếp</button>
+        <button><i class="fa-solid fa-angles-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="boc bang diem">
+    <div class="bangdiem">
+      <div class="tabs">
+        <button [class.active]="activeTab === 'project'" (click)="activeTab = 'project'">
+          Kết quả
+        </button>
+        <button [class.active]="activeTab === 'notice'" (click)="activeTab = 'notice'">
+          Lịch sử
+        </button>
+      </div>
+
+      <div class="boc-bang-diem">
+        <div class="diem-title font-baloo">9 điểm</div>
+        <div class="diem-info">
+          <h3>TOÁN 4 - ĐỀ 10 (Tổng - Hiểu)</h3>
+          <div class="info-row">
+            <span class="text-right">Số lần làm bài</span>
+            <span class="text-left">2</span>
+          </div>
+          <div class="info-row">
+            <span class="text-right">Thời gian</span>
+            <span class="text-left">18 phút 21 giây</span>
+          </div>
+          <div class="info-row">
+            <span class="text-right">Nộp lùi</span>
+            <span class="text-left">13 tháng 8 kể từ 9:53</span>
+          </div>
+          <div class="info-row">
+            <span class="status correct text-right">Số câu đúng</span>
+            <span class="text-left">20</span>
+          </div>
+          <div class="info-row">
+            <span class="status wrong text-right">Số câu sai</span>
+            <span class="text-left">08</span>
+          </div>
+          <div class="info-row">
+            <span class="status undone text-right">Chưa làm</span>
+            <span class="text-left">02</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="action-buttons">
+      <button class="btn-submit">Nộp bài</button>
+      <button class="btn-view">Xem đáp án</button>
+    </div>
+  </div>
+</div>

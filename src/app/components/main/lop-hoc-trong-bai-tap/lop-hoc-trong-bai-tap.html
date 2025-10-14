@@ -30,7 +30,7 @@
 
         <div class="card-footer">
           <span class="start-time">Bắt đầu: 12:57 18/05/2025</span>
-          <button class="btn-join">Tham gia lớp <i class="fa-solid fa-angle-right"></i></button>
+          <button class="btn-join" (click)="openModal()">Tham gia lớp <i class="fa-solid fa-angle-right"></i></button>
         </div>
       </div>
     </div>
@@ -44,5 +44,7 @@
 
   <div class="right-side">
     <app-remind></app-remind>
+
+    <app-modal-lophoc [isOpen]="showModal" (closed)="closeModal()"></app-modal-lophoc>
   </div>
 </div>

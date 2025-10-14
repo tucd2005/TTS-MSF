@@ -1,0 +1,122 @@
+.upload-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(15, 23, 42, 0.65);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.upload-modal.show {
+  display: flex;
+  opacity: 1;
+  animation: fadeInScale 0.3s ease forwards;
+}
+
+/* === MODAL BOX === */
+.modal-wrapper {
+  width: 420px;
+  max-height: 90vh;
+  position: relative;
+}
+
+.modal-container {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  animation: fadeInScale 0.3s ease;
+  position: relative;
+}
+
+/* === LOGO === */
+.logo__img img {
+  width: 200px;
+  display: flex;
+  margin: -25px -58px -10px -56px;
+}
+
+/* === TITLE & DESC === */
+.title {
+  font-weight: 500;
+  margin: -10px 0 -10px 0;
+}
+
+.desc {
+  font-size: 17px;
+  color: #71717a;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+/* === BUTTONS === */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.button-group .btn {
+  padding: 10px 60px;
+  border-radius: 999px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.button-group .btn.btn-cancel {
+  background: #fff;
+  border: 1px solid var(--color-primary);
+  color: #000000;
+}
+.button-group .btn.btn-cancel:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+.button-group .btn.btn-start {
+  background: #5dc2a7;
+  color: #fff;
+}
+.button-group .btn.btn-start:hover {
+  background: #0d966e;
+}
+
+.input-modal {
+  width: 100%;
+  height: 35px;
+  border-radius: 9 px;
+  margin-bottom: 10px;
+  padding: 20px;
+  border: 1px solid gainsboro;
+}
+
+/* === CLOSE BUTTON === */
+.close-btn {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  background: #f68c2f;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.close-btn:hover {
+  background: #e67b1f;
+}
+
+hr {
+  margin: 10px 0 18px;
+  border: none;
+  height: 1px;
+  background-color: #a5a5a5;
+}/*# sourceMappingURL=modal-lophoc.css.map */

@@ -1,0 +1,201 @@
+body {
+  background-color: #f8fafc;
+  color: #2e3a59;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.sidebar {
+  width: 260px;
+  background-color: #1f2a48;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px 0 24px 15px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+.sidebar .profile {
+  display: flex;
+  align-items: center;
+  margin: 0 auto 30px auto;
+  gap: 15px;
+}
+.sidebar .profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sidebar .profile .info-admin {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.sidebar .profile .name {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.sidebar .profile .status {
+  font-size: 13px;
+  color: #a0aec0;
+}
+.sidebar .menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+  padding-left: 8px;
+  padding-right: 12px;
+}
+.sidebar .menu .menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  white-space: nowrap;
+}
+.sidebar .menu .menu-item img {
+  width: 20px;
+  flex-shrink: 0;
+}
+.sidebar .menu .menu-item span {
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sidebar .menu .menu-item:hover, .sidebar .menu .menu-item.active {
+  background-color: #2f3b61;
+}
+
+.main {
+  flex: 1;
+  background-color: #fff;
+  padding: 30px 100px 30px 50px;
+  overflow-y: auto;
+  /* Responsive */
+}
+.main .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.main .header h2 {
+  font-size: 25px;
+  font-weight: 300;
+  position: relative;
+  color: #00b894;
+  top: 8px;
+}
+.main .header .actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.main .header .actions .btn-create {
+  background-color: #00b894;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+.main .header .actions .btn-create:hover {
+  background-color: #019470;
+}
+.main .header .actions .search {
+  position: relative;
+}
+.main .header .actions .search input {
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 8px 36px 8px 12px;
+  font-size: 14px;
+  width: 220px;
+  outline: none;
+  background: #f5f5f5;
+  box-shadow: 0 2px 2px #aaaaaa;
+}
+.main .header .actions .search i {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #718096;
+}
+.main .header .actions .fa-gear {
+  font-size: 28px !important;
+  font-size: 20px;
+  color: #a0aec0;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.main .header .actions .fa-gear:hover {
+  color: #00b894;
+  transform: rotate(30deg);
+}
+.main .stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-top: 16px;
+  max-width: 880px;
+  width: 100%;
+  margin-left: 0;
+  margin-right: auto;
+}
+.main .stats .card {
+  position: relative;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 4px #aaaaaa;
+  padding: 18px 22px;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+.main .stats .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 16px -4px rgba(0, 0, 0, 0.25);
+}
+.main .stats .card img {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  filter: brightness(0) saturate(100%) invert(40%) sepia(5%) saturate(350%) hue-rotate(190deg) brightness(90%) contrast(85%);
+  opacity: 0.85;
+}
+.main .stats .card .number {
+  font-size: 26px;
+  font-weight: 700;
+  color: #2e3a59;
+  margin-bottom: 4px;
+}
+.main .stats .card .label {
+  font-size: 13px;
+  color: #717b8c;
+  font-weight: 500;
+}
+@media (max-width: 992px) {
+  .main .stats {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=admin-dashboard.css.map */

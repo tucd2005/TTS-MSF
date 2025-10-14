@@ -1,0 +1,80 @@
+@charset "UTF-8";
+.mission {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* giữ h2 không bị kéo dãn */
+  gap: 20px;
+}
+
+.mission__left {
+  flex: 1; /* chiếm hết phần còn lại */
+  max-width: 950px; /* giới hạn độ rộng */
+}
+
+.mission__left h1 {
+  display: flex;
+  justify-content: start;
+}
+
+.whiteboard {
+  width: 100%;
+  height: 350px;
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: Arial, sans-serif;
+  padding: 30px;
+  background: #fff;
+  border: 1.5px solid #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 4px #aaaaaa;
+  color: #71717a;
+  resize: none;
+  outline: none;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+h1 {
+  padding-left: 10px;
+  font-weight: 300;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+  margin-right: 25px;
+  margin-top: -45px;
+}
+
+.tabs__item {
+  padding: 0px 20px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+.tabs__item p {
+  color: #fff;
+  font-size: 18px;
+  position: relative;
+  bottom: -3px;
+}
+
+/* màu riêng cho từng loại */
+.tabs__item--orange {
+  background-color: #fe924f;
+}
+
+.tabs__item--green {
+  background-color: #22c55e;
+}
+
+.tabs__item--yellow {
+  background-color: #eab308;
+}
+
+/* trạng thái active (tab đang chọn) */
+.tabs__item--active {
+  outline: 3px solid #3b82f6; /* viền xanh khi chọn */
+}/*# sourceMappingURL=mission.css.map */

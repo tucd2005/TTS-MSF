@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif; /* mặc định toàn site */
+}
+
+.font-baloo {
+  font-family: "Baloo Tammudu", Arial, sans-serif;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.time-box,
+.header.day p,
+.time-box div {
+  font-family: "Baloo Tammudu", Arial, sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+/* Đảm bảo Font Awesome sử dụng font chữ của chính nó để hiển thị icon */
+.fa,
+.fa-solid,
+.fa-regular {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Solid", "Font Awesome 6 Regular", sans-serif !important;
+}
+
+/* Hoặc đơn giản và phổ biến hơn là sử dụng tên font mà thư viện đã định nghĩa */
+.fa-solid {
+  font-weight: 900;
+}
+
+.fa-regular {
+  font-weight: 400; /* Cực kỳ quan trọng để icon Regular (rỗng) hiển thị */
+}
+
+:root {
+  --color-primary: #5dc2a7;
+  --color-background: #f2f6fe;
+  --color-orange: #fe924f;
+  --color-black: #000000;
+  --color-yellow: #ffde59;
+  --color-white: #ffffff;
+  --color-sidebar: #2a3862;
+}/*# sourceMappingURL=styles.css.map */

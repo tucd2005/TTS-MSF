@@ -1,0 +1,131 @@
+.upload-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(2px);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  &.show {
+    display: flex;
+    opacity: 1;
+    animation: fadeInScale 0.3s ease forwards;
+  }
+}
+
+/* === MODAL BOX === */
+.modal-wrapper {
+  width: 420px;
+  max-height: 90vh;
+  position: relative;
+}
+
+.modal-container {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  animation: fadeInScale 0.3s ease;
+  position: relative;
+}
+
+/* === LOGO === */
+.logo__img img {
+  width: 200px;
+  display: flex;
+  margin: -25px -58px -10px -56px;
+}
+
+/* === TITLE & DESC === */
+.title {
+  font-weight: 500;
+  margin: -10px 0 -10px 0;
+}
+
+.desc {
+  font-size: 17px;
+  color: #71717a;
+  line-height: 1.4;
+  margin-bottom: 26px;
+}
+
+/* === BUTTONS === */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+
+  .btn {
+    padding: 10px 60px;
+    border-radius: 999px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &.btn-cancel {
+      background: #fff;
+      border: 1px solid var(--color-primary);
+      color: #000000;
+
+      &:hover {
+        background: var(--color-primary);
+        color: #fff;
+      }
+    }
+
+    &.btn-start {
+      background: #5DC2A7;
+      color: #fff;
+
+      &:hover {
+        background: #0d966e;
+      }
+    }
+  }
+}
+
+/* === CLOSE BUTTON === */
+.close-btn {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  background: #f68c2f;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    background: #e67b1f;
+  }
+}
+
+hr {
+  margin: 10px 0 18px;
+  border: none;
+  height: 1px;
+  background-color: #a5a5a5;
+}
+
+// /* === ANIMATION === */
+// @keyframes fadeInScale {
+//   from {
+//     transform: scale(0.95);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: scale(1);
+//     opacity: 1;
+//   }
+// }

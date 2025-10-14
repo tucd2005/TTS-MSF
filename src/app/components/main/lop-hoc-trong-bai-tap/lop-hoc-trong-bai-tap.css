@@ -1,0 +1,198 @@
+@charset "UTF-8";
+/* ===============================
+   BỐ CỤC CHÍNH
+================================= */
+.container {
+  display: grid;
+  grid-template-columns: 200px 1.4fr 300px; /* trái - giữa - phải */
+  gap: 28px;
+  min-height: 100vh;
+  background: #f5f7ff;
+  align-items: start;
+}
+
+/* ===== CỘT TRÁI ===== */
+.left__sidebar {
+  width: 100%;
+}
+
+/* ===== CỘT GIỮA ===== */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.class-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ===============================
+   CARD LỚP HỌC
+================================= */
+.class-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px -6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 20px 16px 20px;
+}
+
+.class-card:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 8px 20px -6px rgba(59, 130, 246, 0.25);
+  transform: translateY(-3px);
+}
+
+/* ===== BODY ===== */
+.card-body {
+  padding: 15px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.card-header h3 {
+  font-size: 17px;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+/* ===== AVATARS ===== */
+.avatars {
+  display: flex;
+}
+
+.avatars img {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-left: -8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.avatars img:first-child {
+  margin-left: 0;
+}
+
+/* ===== INFO ===== */
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.card-info .info-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ===== FOOTER ===== */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  padding-top: 10px;
+}
+
+.start-time {
+  color: #64748b;
+}
+
+/* ===== NÚT THAM GIA ===== */
+.btn-join {
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-join:hover {
+  background-color: #2563eb;
+}
+
+/* ===== NÚT CAM (đang diễn ra) ===== */
+.btn-join.orange {
+  background-color: var(--color-orange);
+}
+
+.btn-join.orange:hover {
+  background-color: var(--color-orange);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.pagination button {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.pagination button.active {
+  background: #67c4b3;
+  color: white;
+  border-color: #67c4b3;
+}
+
+.pagination button:hover {
+  background: #f0f0f0;
+}
+
+/* ===== CỘT PHẢI ===== */
+.right-side {
+  margin-top: -72px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 60px 1fr;
+  }
+  .right-side {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .card-info {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}/*# sourceMappingURL=lop-hoc-trong-bai-tap.css.map */

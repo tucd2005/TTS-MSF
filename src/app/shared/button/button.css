@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/* Style chi tiết của nút (nằm trong Component Button của bạn) */
+.auth__button {
+  /* CSS cho nút Đăng ký bên trong component */
+  width: 100%; /* Full width của app-button wrapper (ví dụ 70% hoặc 300px) */
+  height: 35px;
+  background: #5dc2a7;
+  border: 1px solid #5dc2a7;
+  border-radius: 30px;
+  color: #fff;
+  padding: 5px 5px;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 35px; /* Dùng line-height bằng height để căn giữa chữ */
+  display: block;
+  margin-top: 40px;
+}
+
+.auth__button:active {
+  transition-duration: 0.1s;
+  background-color: #7dffdc;
+}/*# sourceMappingURL=button.css.map */

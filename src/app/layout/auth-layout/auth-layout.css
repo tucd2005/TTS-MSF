@@ -1,0 +1,56 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+}
+
+.background {
+  background: #f2f6fe;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.login-container {
+  /* Đảm bảo khung ngoài có giới hạn và bo góc */
+  max-width: 1000px;
+  width: 90vw;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  display: block; /* Quan trọng: để background__img chiếm toàn bộ */
+}
+
+.background__img {
+  width: 100%;
+  height: 600px; /* Chiều cao tối thiểu cho khung ảnh */
+  position: relative; /* 👈 KHUNG THAM CHIẾU: Quan trọng nhất */
+  overflow: hidden;
+}
+
+.background__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  border-radius: 20px; /* Áp dụng bo góc cho ảnh */
+  transform: scaleX(-1);
+}
+
+.form-wrapper {
+  position: absolute; /* 👈 ĐỊNH VỊ TUYỆT ĐỐI */
+  background: #ffffff;
+  width: 400px;
+  padding: 20px;
+  border-radius: 15px;
+  top: 50%;
+  right: 30px; /* Cách lề phải 30px */
+  transform: translateY(-50%);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15); /* Thêm shadow để nổi bật */
+  z-index: 10;
+}/*# sourceMappingURL=auth-layout.css.map */

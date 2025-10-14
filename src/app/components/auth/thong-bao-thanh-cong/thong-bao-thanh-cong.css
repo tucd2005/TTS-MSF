@@ -1,0 +1,111 @@
+@charset "UTF-8";
+.thong-bao {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.thong-bao .nen-auth {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.thong-bao .nen-auth img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(0.8) blur(3px);
+  transform: scale(1.05);
+  transform: scaleX(-1);
+}
+.thong-bao .thongbao-card {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  border-radius: 16px;
+  width: 700px;
+  padding: 2rem 2.5rem;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  animation: popUp 0.35s ease-out;
+  /* --- LOGO góc trái --- */
+}
+.thong-bao .thongbao-card .close-btn {
+  position: absolute;
+  top: -14px;
+  right: -21px;
+  background: #f68c2f;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.thong-bao .thongbao-card .close-btn:hover {
+  background: #e67b1f;
+}
+.thong-bao .thongbao-card .logo__img {
+  position: absolute;
+  top: 22px;
+  left: 30px;
+}
+.thong-bao .thongbao-card .logo__img img {
+  height: 180px;
+  width: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: relative;
+  top: -64px;
+  left: -47px;
+}
+.thong-bao .thongbao-card hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 50px 0 10px 0;
+}
+.thong-bao .thongbao-card h2 {
+  color: #49b392;
+  font-size: 27px;
+  font-weight: 400;
+}
+.thong-bao .thongbao-card p {
+  color: #555;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: -10px 0 20px 0;
+}
+.thong-bao .thongbao-card .submit-btn {
+  background: #5acba1;
+  border: none;
+  color: #fff;
+  border-radius: 40px;
+  padding: 0.8rem 1.6rem;
+  font-weight: 100;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.thong-bao .thongbao-card .submit-btn p {
+  color: #fff;
+  position: relative;
+  bottom: -20px;
+}
+.thong-bao .thongbao-card .submit-btn:hover {
+  background: #48b18e;
+}
+
+@keyframes popUp {
+  from {
+    transform: translateY(20px) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=thong-bao-thanh-cong.css.map */

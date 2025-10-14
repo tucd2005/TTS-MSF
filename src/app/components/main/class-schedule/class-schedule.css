@@ -1,0 +1,132 @@
+@charset "UTF-8";
+.schedule-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.schedule-table {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(33, 33, 33, 0.05);
+  display: grid;
+  /* 6 cột đều nhau, mỗi ô vuông */
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  padding: 30px 100px 22px 100px;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-sizing: border-box;
+  width: 1280px;
+}
+
+/* Tất cả các ô đều cùng kích thước */
+.header.day,
+.time-box,
+.cell {
+  width: 160px; /* 👈 cố định width */
+  height: 80px; /* 👈 cố định height */
+  min-width: 160px;
+  min-height: 80px;
+  box-sizing: border-box;
+  border-radius: 13.45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Header */
+.header.day {
+  background: #67c4b3;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.header.day p {
+  margin: 0;
+  white-space: nowrap;
+  font-size: 25px;
+  position: relative;
+  top: 5px;
+}
+
+/* Time box */
+.time-box {
+  background: #f68641;
+  color: white;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 500;
+}
+.time-box div {
+  position: relative;
+  top: 4px;
+  line-height: 1;
+  padding: 3px;
+}
+
+/* Cell */
+.cell {
+  background: #fff;
+  border: 2px solid #9f9f9f;
+  font-size: 13px;
+  color: #cccccc;
+  position: relative;
+  text-align: center;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.cell .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.dot.red {
+  background: #ff4d4f;
+}
+
+.dot.blue {
+  background: #1890ff;
+}
+
+.dot.gray {
+  background: #cccccc;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.pagination button {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.pagination button.active {
+  background: #67c4b3;
+  color: white;
+  border-color: #67c4b3;
+}
+
+.pagination button:hover {
+  background: #f0f0f0;
+}/*# sourceMappingURL=class-schedule.css.map */

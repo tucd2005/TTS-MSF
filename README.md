@@ -13,4 +13,7 @@
 
 
 
-! - do not use empty ruleset :  đừng để selector trống 
+! - do not use empty ruleset :  đừng để selector trống
+
+
+# object-fit : dùng để điều khiển cách ảnh co giãn để vừa với khung chứa mà vẫn giữ đúng tỉ lệ gốc : nói nôm na là nó giúp cho ảnh khi mà để height nó nhỏ thì k bị méo ảnh

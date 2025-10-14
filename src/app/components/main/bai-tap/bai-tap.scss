@@ -1,0 +1,334 @@
+.bai-tap {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+/* === OUTER: Giữ border và tạo khoảng cách 20px đến scroll === */
+.baitap-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  border-radius: 20px; /* Đồng bộ bo tròn, ok nếu muốn lớn hơn */
+  padding: 25px 5px 25px 26px;
+  max-height: 100vh;
+  border: 10px solid #5dc2a7;
+  box-sizing: border-box;
+  background-clip: padding-box; /* Thêm: Tránh màu nền chồng border */
+}
+/* === INNER: Nơi scroll thực sự hoạt động === */
+.baitap-inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow-y: auto;
+  padding: 0 10px 0 0; /* Giữ để nội dung cách thumb */
+  max-height: 100%;
+  border-radius: 8px; /* Lỗi đánh máy cũ? Giữ nếu cần, nhưng không ảnh hưởng scroll */
+
+  /* Tùy chỉnh scrollbar (WebKit) - nest đầy đủ */
+  &::-webkit-scrollbar {
+    width: 8px; /* Giữ mỏng */
+
+    &-button {
+      display: none !important; /* Tăng force ẩn arrow (thêm !important nếu stubborn OS) */
+      height: 0 !important;
+      width: 0 !important;
+      background: transparent; /* Dự phòng che màu arrow nếu lòi */
+    }
+
+    &-track {
+      background: #cccc;
+      border-radius: 20px; /* Tăng lên 20px để bo tròn mạnh hai đầu track (như viên thuốc) */
+      margin: 5px 0; /* Giảm xuống 5px để track dài hơn, bo tròn rõ ở đầu/cuối mà vẫn che arrow dư */
+      border: none;
+      box-shadow: inset 0 0 0 1px transparent; /* Dự phòng làm mịn */
+    }
+
+    &-thumb {
+      background: #eb9138;
+      border-radius: 20px; /* Đồng bộ bo tròn với track, để thumb tròn ở hai đầu khi chạm margin */
+      min-height: 40px; /* Đảm bảo thumb dài đủ để thấy bo tròn */
+      border: 0 solid transparent; /* Thêm nếu muốn thumb mỏng hơn giữa */
+    }
+  }
+
+  /* Cho Firefox: Không bo tròn custom, nhưng mỏng và ẩn arrow tự động */
+  scrollbar-width: thin;
+  scrollbar-color: #eb9138 #cccc;
+}
+/* Phần còn lại giữ nguyên */
+.cauhoi-box {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f0f0f0;
+  padding-right: 0;
+}
+
+.cauhoi-box:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.cauhoi {
+  font-weight: 600;
+  line-height: 1.5;
+  //   margin-bottom: 16px;
+}
+
+.dapan {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.dapanA,
+.dapanB,
+.dapanC,
+.dapanD {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+  padding: 10px 10px 0 0px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dapanA input,
+.dapanB input,
+.dapanC input,
+.dapanD input {
+  display: none;
+}
+
+.dapanA .option,
+.dapanB .option,
+.dapanC .option,
+.dapanD .option {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--color-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+.dapanA .text,
+.dapanB .text,
+.dapanC .text,
+.dapanD .text {
+  flex: 1;
+  color: var(--color-black);
+}
+
+.dapanA input:checked + .option,
+.dapanB input:checked + .option,
+.dapanC input:checked + .option,
+.dapanD input:checked + .option {
+  background-color: #eb9138;
+  color: var(--color-white);
+  border: none;
+}
+
+.dapanA input:checked ~ .text,
+.dapanB input:checked ~ .text,
+.dapanC input:checked ~ .text,
+.dapanD input:checked ~ .text {
+  font-weight: 600;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.pagination button {
+  background: var(--color-white);
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.pagination button.active {
+  background: #67c4b3;
+  color: var(--color-white);
+  border-color: #67c4b3;
+}
+
+.pagination button:hover {
+  background: #f0f0f0;
+}
+
+/* Bảng điểm */
+.bangdiem {
+  width: 300px;
+  background: var(--color-white);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 20px;
+  flex-shrink: 0;
+
+  .diem-title {
+    background-color: var(--color-primary); /* Màu xanh lá nhạt từ ảnh */
+    color: var(--color-white);
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .diem-info {
+    padding: 7px;
+
+    h3 {
+      font-size: 16px;
+      font-weight: bold;
+      color: var(--color-black);
+      margin-bottom: 10px;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: var(--color-black);
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+      span {
+        display: flex;
+        align-items: center;
+        gap: 8px; /* Khoảng cách giữa dấu màu và văn bản */
+      }
+    }
+    .status {
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: '';
+        width: 10px; /* Kích thước dấu màu lớn hơn, rõ ràng */
+        height: 10px;
+        border-radius: 3px; /* Bo tròn thành hình tròn */
+        // margin-right: 8px; /* Khoảng cách với văn bản */
+      }
+
+      &.correct::before {
+        background-color: green;
+      }
+
+      &.wrong::before {
+        background-color: red;
+      }
+
+      &.undone::before {
+        background-color: gray;
+      }
+    }
+
+    .text-left {
+      font-weight: 700;
+    }
+  }
+
+  .boc-bang-diem {
+    border: 1px solid var(--color-primary);
+    border-radius: 10px;
+  }
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  background: var(--color-white);
+  border: 0.5px solid rgb(193, 193, 193);
+  border-radius: 10px;
+  gap: 0;
+  margin-bottom: 16px;
+
+  box-shadow: rgba(174, 174, 174, 0.25);
+
+  button {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 10px 0;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #696969;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    font-size: 14px;
+
+    &.active {
+      background: var(--color-primary);
+      color: var(--color-white);
+      box-shadow: 0 2px 5px rgba(246, 140, 47, 0.3);
+    }
+
+    &:hover:not(.active) {
+      background: var(--color-white) 8f2;
+      color: var(--color-primary);
+    }
+  }
+}
+
+/* Nút hành động bên ngoài */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between; /* Căn giữa hai nút */
+  margin-top: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .btn-submit {
+    background-color: #f5a623;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 40px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+
+    &:hover {
+      background-color: #e5941e;
+    }
+  }
+
+  .btn-view {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-primary);
+    color: var(--color-black);
+    border-radius: 6px;
+    padding: 8px 30px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+
+    &:hover {
+      background-color: #d0d0d0;
+    }
+  }
+}
