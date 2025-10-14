@@ -1,4 +1,25 @@
-<div class="modal-hoctap">
-    
+<div class="upload-modal" [class.show]="isOpen">
+  <div class="modal-wrapper">
+    <div class="modal-container">
+      <button class="close-btn" (click)="onClose()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
 
+      <div class="logo__img">
+        <img src="logo.png" alt="Classroom Hub Logo" />
+      </div>
+
+      <hr />
+
+      <h2 class="title font-baloo">Bắt đầu nào!!!</h2>
+      <p class="desc">
+        Cùng Classroom hub luyện đề Toán 4 - Đề 5 trong 1h30p tới nhé?
+      </p>
+
+      <div class="button-group">
+        <button class="btn btn-cancel" (click)="onClose()">Quay lại</button>
+        <button class="btn btn-start">Bắt đầu</button>
+      </div>
+    </div>
+  </div>
 </div>

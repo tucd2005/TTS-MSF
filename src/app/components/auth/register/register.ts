@@ -25,27 +25,27 @@ export class Register {
       password: ['',[Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', [Validators.required]]
      }, {
-        validators: passwordMatchValidator 
+        validators: passwordMatchValidator
      })
 
-     onSubmit() {      
+     onSubmit() {
       console.log("submit clicked", this.registerForm.value, this.registerForm.valid);
-      
+
       if(this.registerForm.invalid){
         this.registerForm.markAllAsTouched()
         return;
-      } 
+      }
 
       const rawForm = this.registerForm.getRawValue();
       this.authService.register(rawForm).subscribe({
         next: () => {
           alert('Đăng ký thành công! Vui lòng đăng nhập.')
-          this.router.navigate(['/auth/login']);
+          this.router.navigate(['/popup']);
         },
         error: (err) => {
           alert('Đã có lỗi xảy ra!');
           console.error(err);
-          
+
         }
       })
      }

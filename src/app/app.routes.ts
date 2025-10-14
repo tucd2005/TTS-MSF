@@ -21,47 +21,52 @@ import { LopHocTrongBaiTap } from './components/main/lop-hoc-trong-bai-tap/lop-h
 import { Step1Email } from './components/auth/forgot-password/step-1-email/step-1-email';
 import { Step2Verify } from './components/auth/forgot-password/step-2-verify/step-2-verify';
 import { Step3Reset } from './components/auth/forgot-password/step-3-reset/step-3-reset';
+import { PopupRegister } from './components/auth/popup-register/popup-register';
+import { ModalHoctap } from './modal/modal-hoctap/modal-hoctap';
 
 export const routes: Routes = [
-    // { path: "home", component: Home },
-    // { path: "", redirectTo: '/home', pathMatch: "full" },
+  // { path: "home", component: Home },
+  // { path: "", redirectTo: '/home', pathMatch: "full" },
 
-    { path: "header", component: Header },
-    { path: "thong-tin-tai-khoan", component: ThongTinTaiKhoan },
-    { path: "thong-bao", component: ThongBaoThanhCong },
+  { path: 'header', component: Header },
+  { path: 'modal-hoctap', component: ModalHoctap },
+  { path: 'thong-tin-tai-khoan', component: ThongTinTaiKhoan },
+  { path: 'thong-bao', component: ThongBaoThanhCong },
 
-    { path: "admin", component: AdminDashboard },
-    {
-        path: "", component: MainLayout,
+  { path: 'admin', component: AdminDashboard },
+  {
+    path: '',
+    component: MainLayout,
+    children: [
+      { path: 'mission', component: Mission },
+      { path: 'dashboard', component: Dashboard },
+      { path: 'class-schedule', component: ClassSchedule },
+      { path: 'policy', component: Policy },
+      { path: 'document', component: Documents },
+      { path: 'exercise', component: Exercises },
+      { path: 'profile', component: Profile },
+      { path: 'lop-hoc', component: LopHocTrongBaiTap },
+    ],
+  },
+
+  { path: 'popup', component: PopupRegister },
+  {
+    path: 'auth',
+    component: AuthLayout,
+    children: [
+      { path: 'register', component: Register },
+
+      { path: 'login', component: Login },
+      {
+        path: 'forgot-password',
+        component: ForgotPassword,
         children: [
-            { path: "mission", component: Mission },
-            { path: "dashboard", component: Dashboard },
-            { path: "class-schedule", component: ClassSchedule },
-            { path: "policy", component: Policy },
-            { path: "document", component: Documents },
-            { path: "exercise", component: Exercises },
-            { path: "profile", component: Profile },
-            { path: "lop-hoc", component: LopHocTrongBaiTap },
-
-        ]
-    },
-    
-    {
-        path: 'auth',
-        component: AuthLayout,
-        children: [
-            { path: "register", component: Register },
-            { path: "login", component: Login },
-            {
-                path: "forgot-password",
-                component: ForgotPassword,
-                children: [
-                    { path: "", redirectTo: "email", pathMatch: "full" },
-                    { path: "email", component: Step1Email },
-                    { path: "verify", component: Step2Verify },
-                    { path: "reset", component: Step3Reset },
-                ]
-            },
-        ]
-    }
+          { path: '', redirectTo: 'email', pathMatch: 'full' },
+          { path: 'email', component: Step1Email },
+          { path: 'verify', component: Step2Verify },
+          { path: 'reset', component: Step3Reset },
+        ],
+      },
+    ],
+  },
 ];

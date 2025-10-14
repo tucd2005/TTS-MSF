@@ -17,6 +17,7 @@
       object-fit: cover;
       filter: brightness(0.8) blur(3px);
       transform: scale(1.05);
+      transform: scaleX(-1);
     }
   }
 

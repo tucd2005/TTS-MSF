@@ -1,8 +1,6 @@
 <div class="exercise">
   <!-- Sidebar trái -->
-  <app-leftsidebar>
-
-  </app-leftsidebar>
+  <app-leftsidebar> </app-leftsidebar>
 
   <!-- Khu vực chính -->
   <div class="main__exercise">
@@ -11,70 +9,25 @@
 
     <!-- Danh sách bài tập -->
     <div class="exercise__list">
-      <div class="exercise__item">
-        <img src="avatar.png" alt="avatar" />
+      <div class="exercise__item" *ngFor="let ex of exercises">
+        <img [src]="ex.avatar" alt="avatar" />
         <div class="info">
-          <h3>Hương Vân <span>• Hình chữ nhật dấu sao</span></h3>
+          <h3>
+            {{ ex.name }}<span>{{ ex.title }}</span>
+          </h3>
           <div class="meta">
-            <span class="tag orange">AC</span>
-            <span class="score">100/100</span>
-            <span class="tag gray">PY3</span>
+            <span class="tag orange">{{ ex.result }}</span>
+            <span class="score">{{ ex.score }}</span>
+            <span class="tag gray">{{ ex.level }}</span>
           </div>
         </div>
-        <button class="start-btn">Bắt đầu <i class="fa-solid fa-angle-right"></i></button>
-      </div>
-
-      <div class="exercise__item">
-        <img src="avatar.png" alt="avatar" />
-        <div class="info">
-          <h3>Hương Vân <span>• Hình chữ nhật dấu sao</span></h3>
-          <div class="meta">
-            <span class="tag orange">AC</span>
-            <span class="score">100/100</span>
-            <span class="tag gray">PY3</span>
-          </div>
-        </div>
-        <button class="start-btn">Bắt đầu <i class="fa-solid fa-angle-right"></i></button>
-      </div>
-      <div class="exercise__item">
-        <img src="avatar.png" alt="avatar" />
-        <div class="info">
-          <h3>Hương Vân <span>• Hình chữ nhật dấu sao</span></h3>
-          <div class="meta">
-            <span class="tag orange">AC</span>
-            <span class="score">100/100</span>
-            <span class="tag gray">PY3</span>
-          </div>
-        </div>
-        <button class="start-btn">Bắt đầu <i class="fa-solid fa-angle-right"></i></button>
-      </div>
-      <div class="exercise__item">
-        <img src="avatar.png" alt="avatar" />
-        <div class="info">
-          <h3>Hương Vân <span>• Hình chữ nhật dấu sao</span></h3>
-          <div class="meta">
-            <span class="tag orange">AC</span>
-            <span class="score">100/100</span>
-            <span class="tag gray">PY3</span>
-          </div>
-        </div>
-        <button class="start-btn">Bắt đầu <i class="fa-solid fa-angle-right"></i></button>
-      </div>
-      <div class="exercise__item">
-        <img src="avatar.png" alt="avatar" />
-        <div class="info">
-          <h3>Hương Vân <span>• Hình chữ nhật dấu sao</span></h3>
-          <div class="meta">
-            <span class="tag orange">AC</span>
-            <span class="score">100/100</span>
-            <span class="tag gray">PY3</span>
-          </div>
-        </div>
-        <button class="start-btn">Bắt đầu <i class="fa-solid fa-angle-right"></i></button>
+        <button class="start-btn" (click)="openModal()">
+          Bắt đầu <i class="fa-solid fa-angle-right"></i>
+        </button>
       </div>
     </div>
   </div>
-
   <!-- Cột phải -->
   <app-right-exercise></app-right-exercise>
+  <app-modal-hoctap [isOpen]="showModal" (closed)="closeModal()"></app-modal-hoctap>
 </div>

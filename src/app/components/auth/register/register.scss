@@ -24,9 +24,9 @@
 
 /* ===================== TIÊU ĐỀ (.title) =================== */
 .title {
-  width: 300px; 
+  width: 300px;
     /* Căn giữa khối title */
-    margin: 50px auto 0 auto; 
+    margin: 50px auto 0 auto;
     /* Giữ text-align: center để văn bản bên trong căn giữa */
     text-align: center;
 }
@@ -72,12 +72,12 @@
 .auth-form__input {
   /* Input fill 100% của khối 300px cha */
   width: 100%; /* Sửa: Thay vì 300px cứng */
-  margin: 5px 0; 
+  margin: 5px 0;
   height: 33px;
   border: 1px solid #ccc;
   border-radius: 60px;
   padding: 0 12px;
-  margin: 15px 0 ; 
+  margin: 15px 0 ;
   box-sizing: border-box;
   display: block;
   /* Lưu ý: color: #ccc; sẽ khiến chữ gõ vào là màu xám. */
@@ -102,7 +102,7 @@
   /* Căn giữa khối 300px */
   width: 300px;
   margin: 10px auto;
-  padding-bottom: 20px; 
+  padding-bottom: 20px;
   display: flex;
   align-items: center;
   // text-align: center;
@@ -133,7 +133,7 @@
   /* Căn giữa khối 300px */
   width: 300px;
   margin: 10px auto;
-  
+
   display: flex;
   justify-content: space-between; /* Đổi space-around thành space-between */
   gap: 10px;
@@ -188,16 +188,16 @@
 
 app-validation-message {
   display: block;
-  color: #e74c3c; 
+  color: #e74c3c;
   font-size: 5px;
-  
+
   /* Kéo sát lên input (vẫn dùng margin âm) */
-  // margin-top: -9px; 
-  
-  /* QUAN TRỌNG: Đặt margin-bottom cố định để khoảng cách 
+  // margin-top: -9px;
+
+  /* QUAN TRỌNG: Đặt margin-bottom cố định để khoảng cách
      giữa thông báo lỗi và input tiếp theo luôn ổn định */
   // margin-bottom: px; /* Đặt khoảng cách đều đặn */
-  
+
   /* Đảm bảo căn chỉnh ngang */
-  margin-left: -5px; 
+  margin-left: -5px;
 }

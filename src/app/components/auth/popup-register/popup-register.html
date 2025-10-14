@@ -1,0 +1,86 @@
+<div class="popup-modal">
+  <div class="nen-auth">
+    <img src="bg-auth.jpg" alt="background" />
+  </div>
+
+  <div class="register-card">
+    <button class="close-btn" (click)="onClose()">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <!-- ======================== FORM THÔNG TIN ======================== -->
+    <ng-container *ngIf="mode === 'info'">
+      <h2>Thông tin đăng ký tài khoản</h2>
+
+      <form [formGroup]="infoForm" (ngSubmit)="onSubmitInfo()">
+        <div class="form-group">
+          <label>Họ và tên</label>
+          <input type="text" formControlName="name" placeholder="Nhập" />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>E-mail</label>
+            <input type="email" formControlName="email" placeholder="Nhập" />
+          </div>
+          <div class="form-group">
+            <label>Số điện thoại</label>
+            <input type="text" formControlName="phone" placeholder="Nhập" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Ngày sinh</label>
+            <input type="date" formControlName="birth" placeholder="Nhập" />
+          </div>
+          <div class="form-group">
+            <label>Trường học</label>
+            <input type="text" formControlName="school" placeholder="Nhập" />
+          </div>
+        </div>
+
+        <div class="form-group role-group">
+          <label>Bạn là</label>
+          <div class="roles">
+            <label>
+              <input type="radio" formControlName="role" value="teacher" />
+              Giáo viên
+            </label>
+            <label>
+              <input type="radio" formControlName="role" value="student" />
+              Học sinh
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          Bắt đầu với classroom hub
+        </button>
+      </form>
+    </ng-container>
+
+    <!-- ======================== POPUP THÀNH CÔNG ======================== -->
+    <ng-container *ngIf="mode === 'success'">
+      <div class="success-view">
+        <div class="logo__img">
+          <img src="logo.png" alt="Classroom Hub Logo" />
+        </div>
+
+        <hr />
+
+        <h2 class="font-baloo">Đăng ký thành công</h2>
+        <p>
+          Bạn đã đăng ký thành công. Kiểm tra email để hoàn thành xác thực. Nếu
+          bạn không tìm thấy, hãy kiểm tra thư mục spam của bạn.
+        </p>
+
+        <button class="submit-btn"
+            routerLink="/auth/login"
+        >
+          <p class="font-baloo">Bắt đầu ngay với classroom hub</p>
+        </button>
+      </div>
+    </ng-container>
+  </div>
+</div>
