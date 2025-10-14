@@ -1,1 +1,83 @@
-<p>create-class works!</p>
+<div class="create-class-card">
+  <h3 class="title">Tạo lớp học mới</h3>
+<hr>
+  <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+    <div class="form-row">
+      <label>Tên lớp học</label>
+      <input type="text" formControlName="className" placeholder="ND: Lớp AAAA Khóa BBBB" />
+      <div class="error" *ngIf="form.get('className')?.touched && form.get('className')?.invalid">
+        <span *ngIf="form.get('className')?.errors?.['required']">Tên lớp là bắt buộc.</span>
+        <span *ngIf="form.get('className')?.errors?.['maxlength']">Tên quá dài.</span>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label>Thể lệ lớp học</label>
+      <textarea formControlName="classRule" rows="5" placeholder="Nhập"></textarea>
+    </div>
+
+    <div class="members-section">
+      <h4>Thêm thành viên</h4>
+
+      <div class="add-member-row">
+        <div class="col">
+          <label>Email/username</label>
+          <input type="text" formControlName="memberEmail" placeholder="Nhập" />
+          <div class="error" *ngIf="form.get('memberEmail')?.touched && form.get('memberEmail')?.errors">
+            <span *ngIf="form.get('memberEmail')?.errors?.['required']">Email là bắt buộc.</span>
+            <span *ngIf="form.get('memberEmail')?.errors?.['email']">Email không hợp lệ.</span>
+            <span *ngIf="form.get('memberEmail')?.errors?.['duplicate']">Email đã tồn tại.</span>
+          </div>
+        </div>
+
+        <div class="col">
+          <label>Role</label>
+          <select formControlName="memberRole">
+            <option *ngFor="let r of roleOptions" [value]="r">{{ r }}</option>
+          </select>
+        </div>
+
+    </div>
+    <div class="actions">
+      <button type="button" class="btn btn-add" (click)="addMember()">Thêm</button>
+
+      <label class="upload-btn">
+        <input type="file" accept=".csv,.txt" (change)="onFileChange($event)" hidden />
+        <button type="button" class="btn btn-upload">Tải lên danh sách học sinh</button>
+      </label>
+    </div>
+
+      <div class="upload-error" *ngIf="uploadError">{{ uploadError }}</div>
+
+      <div class="members-table">
+        <table>
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Email/username</th>
+              <th>Role</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let m of members; index as i">
+              <td>{{ i + 1 }}</td>
+              <td>{{ m.email }}</td>
+              <td>{{ m.role }}</td>
+              <td class="trash">
+                <button type="button" (click)="removeMember(m.id)">🗑️</button>
+              </td>
+            </tr>
+            <tr *ngIf="members.length === 0">
+              <td colspan="4" class="empty">Chưa có thành viên nào.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="footer-actions">
+      <button type="submit" class="btn btn-create">Tạo lớp học</button>
+    </div>
+  </form>
+</div>

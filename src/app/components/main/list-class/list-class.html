@@ -12,7 +12,7 @@
         <input type="text" placeholder="Tìm kiếm" />
         <i class="fa fa-search"></i>
       </div>
-      <button class="btn-add">Thêm lớp +</button>
+      <button class="btn-add" routerLink="/create-class">Thêm lớp +</button>
     </div>
 
     <!-- Danh sách lớp -->
@@ -24,12 +24,12 @@
             <h3>{{ cls.name }}</h3>
             <div class="item-info">
               <div style="display: flex; align-items: center; gap: 5px">
-                <i class="fa-solid fa-circle-user"  style="font-size: 11px;"></i>
+                <i class="fa-solid fa-circle-user" style="font-size: 11px"></i>
                 <p>{{ cls.teacher }}</p>
               </div>
 
               <div style="display: flex; align-items: center; gap: 5px">
-                <i class="fa-regular fa-clock" style="font-size: 10px;"></i>
+                <i class="fa-regular fa-clock" style="font-size: 10px"></i>
                 <span>{{ cls.time }}</span>
               </div>
             </div>
@@ -38,6 +38,7 @@
         <button class="btn-detail">Xem chi tiết</button>
       </div>
     </div>
+    <app-paginate></app-paginate>
   </div>
 
   <app-remind class="right-side"></app-remind>

@@ -17,3 +17,5 @@
 
 
 # object-fit : dùng để điều khiển cách ảnh co giãn để vừa với khung chứa mà vẫn giữ đúng tỉ lệ gốc : nói nôm na là nó giúp cho ảnh khi mà để height nó nhỏ thì k bị méo ảnh
+
+# not assignable : không thể gán lại 

@@ -28,6 +28,7 @@ import { BaiTap } from './components/main/bai-tap/bai-tap';
 import { Teacher } from './components/main/teacher/teacher';
 import { ListClass } from './components/main/list-class/list-class';
 import { ListStudent } from './components/main/list-student/list-student';
+import { CreateClass } from './components/main/create-class/create-class';
 
 export const routes: Routes = [
   // { path: "home", component: Home },
@@ -56,6 +57,7 @@ export const routes: Routes = [
       { path: 'profile-teacher', component: Teacher },
       { path: 'list-class', component: ListClass },
       { path: 'list-student', component: ListStudent },
+      { path: 'create-class', component: CreateClass },
     ],
   },
 

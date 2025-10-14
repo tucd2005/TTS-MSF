@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-import { Leftsidebar } from "../../../shared/leftsidebar/leftsidebar";
-import { Remind } from "../../../shared/remind/remind";
+import { Leftsidebar } from '../../../shared/leftsidebar/leftsidebar';
+import { Remind } from '../../../shared/remind/remind';
 import { CommonModule } from '@angular/common';
+import { Paginate } from '../../../shared/paginate/paginate';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-list-class',
-  imports: [Leftsidebar, Remind, CommonModule],
+  imports: [Remind, CommonModule, Paginate, RouterLink],
   templateUrl: './list-class.html',
   styleUrl: './list-class.scss',
 })

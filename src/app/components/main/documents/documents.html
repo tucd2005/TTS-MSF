@@ -1,273 +1,35 @@
 <div class="document">
-    <app-leftsidebar></app-leftsidebar>
-    <div class="main_content">
-        <app-search></app-search>
+  <app-leftsidebar></app-leftsidebar>
+  <div class="main_content">
+    <app-search></app-search>
 
-        <div class="cart__grid">
-            <div class="cart__items">
-                <img src="bg-auth.jpg" alt="">
-                <div class="info__items">
-                    <div class="name__items">
-                        <h4>Toán 4 - N2 - HAUGFAL</h4>
-                        <div class="anh-long-anh">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                        </div>
-                    </div>
-
-                    <div class="info__time">
-                        <p> <i class="fa-regular fa-clock"></i> 18:30, 20/10/2024</p>
-                    </div>
-
-                    <button>Xem chi tiết</button>
-                </div>
+    <div class="cart__grid">
+      <!-- Sử dụng *ngFor để lặp qua mảng classes -->
+      <div class="cart__items" *ngFor="let item of classes">
+        <img [src]="item.bgImage" alt="Background" />
+        <div class="info__items">
+          <div class="name__items">
+            <h4>{{ item.name }}</h4>
+            <div class="anh-long-anh">
+              <!-- Lặp nội bộ cho avatar nếu cần động -->
+              <img [src]="avatar" alt="Avatar" *ngFor="let avatar of item.avatars" />
+              <!-- Nếu muốn hiển thị "+X" nếu >5:
+              <span *ngIf="item.avatars.length > 5">+{{ item.avatars.length - 5 }}</span>
+              -->
             </div>
-            <div class="cart__items">
-                <img src="bg-auth.jpg" alt="">
-                <div class="info__items">
-                    <div class="name__items">
-                        <h4>Toán 4 - N2 - HAUGFAL</h4>
-                        <div class="anh-long-anh">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                        </div>
-                    </div>
+          </div>
 
-                    <div class="info__time">
-                        <p> <i class="fa-regular fa-clock"></i> 18:30, 20/10/2024</p>
-                    </div>
+          <div class="info__time">
+            <p><i class="fa-regular fa-clock"></i> {{ item.time }}</p>
+          </div>
 
-                    <button>Xem chi tiết</button>
-                </div>
-            </div>
-            <div class="cart__items">
-                <img src="bg-auth.jpg" alt="">
-                <div class="info__items">
-                    <div class="name__items">
-                        <h4>Toán 4 - N2 - HAUGFAL</h4>
-                        <div class="anh-long-anh">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                        </div>
-                    </div>
-
-                    <div class="info__time">
-                        <p> <i class="fa-regular fa-clock"></i> 18:30, 20/10/2024</p>
-                    </div>
-
-                    <button>Xem chi tiết</button>
-                </div>
-            </div>
-            <div class="cart__items">
-                <img src="bg-auth.jpg" alt="">
-                <div class="info__items">
-                    <div class="name__items">
-                        <h4>Toán 4 - N2 - HAUGFAL</h4>
-                        <div class="anh-long-anh">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                        </div>
-                    </div>
-
-                    <div class="info__time">
-                        <p> <i class="fa-regular fa-clock"></i> 18:30, 20/10/2024</p>
-                    </div>
-
-                    <button>Xem chi tiết</button>
-                </div>
-            </div>
-            <div class="cart__items">
-                <img src="bg-auth.jpg" alt="">
-                <div class="info__items">
-                    <div class="name__items">
-                        <h4>Toán 4 - N2 - HAUGFAL</h4>
-                        <div class="anh-long-anh">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                        </div>
-                    </div>
-
-                    <div class="info__time">
-                        <p> <i class="fa-regular fa-clock"></i> 18:30, 20/10/2024</p>
-                    </div>
-
-                    <button>Xem chi tiết</button>
-                </div>
-            </div>
-            <div class="cart__items">
-                <img src="bg-auth.jpg" alt="">
-                <div class="info__items">
-                    <div class="name__items">
-                        <h4>Toán 4 - N2 - HAUGFAL</h4>
-                        <div class="anh-long-anh">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                        </div>
-                    </div>
-
-                    <div class="info__time">
-                        <p> <i class="fa-regular fa-clock"></i> 18:30, 20/10/2024</p>
-                    </div>
-
-                    <button>Xem chi tiết</button>
-                </div>
-            </div>
-            <div class="cart__items">
-                <img src="bg-auth.jpg" alt="">
-                <div class="info__items">
-                    <div class="name__items">
-                        <h4>Toán 4 - N2 - HAUGFAL</h4>
-                        <div class="anh-long-anh">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                        </div>
-                    </div>
-
-                    <div class="info__time">
-                        <p> <i class="fa-regular fa-clock"></i> 18:30, 20/10/2024</p>
-                    </div>
-
-                    <button>Xem chi tiết</button>
-                </div>
-            </div>
-            <div class="cart__items">
-                <img src="bg-auth.jpg" alt="">
-                <div class="info__items">
-                    <div class="name__items">
-                        <h4>Toán 4 - N2 - HAUGFAL</h4>
-                        <div class="anh-long-anh">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                        </div>
-                    </div>
-
-                    <div class="info__time">
-                        <p> <i class="fa-regular fa-clock"></i> 18:30, 20/10/2024</p>
-                    </div>
-
-                    <button>Xem chi tiết</button>
-                </div>
-            </div>
-            <div class="cart__items">
-                <img src="bg-auth.jpg" alt="">
-                <div class="info__items">
-                    <div class="name__items">
-                        <h4>Toán 4 - N2 - HAUGFAL</h4>
-                        <div class="anh-long-anh">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                        </div>
-                    </div>
-
-                    <div class="info__time">
-                        <p> <i class="fa-regular fa-clock"></i> 18:30, 20/10/2024</p>
-                    </div>
-
-                    <button>Xem chi tiết</button>
-                </div>
-            </div>
-            <div class="cart__items">
-                <img src="bg-auth.jpg" alt="">
-                <div class="info__items">
-                    <div class="name__items">
-                        <h4>Toán 4 - N2 - HAUGFAL</h4>
-                        <div class="anh-long-anh">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                        </div>
-                    </div>
-
-                    <div class="info__time">
-                        <p> <i class="fa-regular fa-clock"></i> 18:30, 20/10/2024</p>
-                    </div>
-
-                    <button>Xem chi tiết</button>
-                </div>
-            </div>
-            <div class="cart__items">
-                <img src="bg-auth.jpg" alt="">
-                <div class="info__items">
-                    <div class="name__items">
-                        <h4>Toán 4 - N2 - HAUGFAL</h4>
-                        <div class="anh-long-anh">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                        </div>
-                    </div>
-
-                    <div class="info__time">
-                        <p> <i class="fa-regular fa-clock"></i> 18:30, 20/10/2024</p>
-                    </div>
-
-                    <button>Xem chi tiết</button>
-                </div>
-            </div>
-            <div class="cart__items">
-                <img src="bg-auth.jpg" alt="">
-                <div class="info__items">
-                    <div class="name__items">
-                        <h4>Toán 4 - N2 - HAUGFAL</h4>
-                        <div class="anh-long-anh">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                            <img src="avatar.png" alt="">
-                        </div>
-                    </div>
-
-                    <div class="info__time">
-                        <p> <i class="fa-regular fa-clock"></i> 18:30, 20/10/2024</p>
-                    </div>
-
-                    <button>Xem chi tiết</button>
-                </div>
-            </div>
+          <button (click)="viewDetails(item)">Xem chi tiết</button>
         </div>
-        <div class="pagination">
-            <button><i class="fa-solid fa-angles-left"></i></button>
-            <button><i class="fa-solid fa-angle-left"></i></button>
-            <button class="active">1</button>
-            <button><i class="fa-solid fa-angle-right"></i></button>
-            <button><i class="fa-solid fa-angles-right"></i></button>
-        </div>
+      </div>
     </div>
-    <div class="right-side">
-
-        <app-remind></app-remind>
-    </div>
-
+    <app-paginate></app-paginate>
+  </div>
+  <div class="right-side">
+    <app-remind></app-remind>
+  </div>
 </div>
