@@ -29,11 +29,15 @@ import { Teacher } from './components/main/teacher/teacher';
 import { ListClass } from './components/main/list-class/list-class';
 import { ListStudent } from './components/main/list-student/list-student';
 import { CreateClass } from './components/main/create-class/create-class';
+import { Relative } from './positions/relative/relative';
 
 export const routes: Routes = [
-  // { path: "home", component: Home },
-  // { path: "", redirectTo: '/home', pathMatch: "full" },
 
+
+
+
+
+  { path: '', component: Relative },
   { path: 'header', component: Header },
   { path: 'modal-hoctap', component: ModalHoctap },
   { path: 'thong-tin-tai-khoan', component: ThongTinTaiKhoan },
