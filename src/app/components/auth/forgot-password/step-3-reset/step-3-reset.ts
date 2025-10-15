@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { Button } from "../../../../shared/button/button";
+import { Button } from '../../../../shared/button/button';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-step-3-reset', standalone: true,
+  selector: 'app-step-3-reset',
+  standalone: true,
 
-  imports: [Button],
+  imports: [Button, RouterLink],
   templateUrl: './step-3-reset.html',
-  styleUrl: './step-3-reset.scss'
+  styleUrl: './step-3-reset.scss',
 })
-export class Step3Reset {
-
-}
+export class Step3Reset {}
