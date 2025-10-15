@@ -1,6 +1,6 @@
 <div class="create-class-card">
   <h3 class="title">Tạo lớp học mới</h3>
-<hr>
+  <hr />
   <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
     <div class="form-row">
       <label>Tên lớp học</label>
@@ -19,14 +19,27 @@
     <div class="members-section">
       <h4>Thêm thành viên</h4>
 
-      <div class="add-member-row">
+      <div class="add-member-row"style="padding-bottom: 10px;" >
         <div class="col">
           <label>Email/username</label>
           <input type="text" formControlName="memberEmail" placeholder="Nhập" />
-          <div class="error" *ngIf="form.get('memberEmail')?.touched && form.get('memberEmail')?.errors">
-            <span *ngIf="form.get('memberEmail')?.errors?.['required']">Email là bắt buộc.</span>
-            <span *ngIf="form.get('memberEmail')?.errors?.['email']">Email không hợp lệ.</span>
-            <span *ngIf="form.get('memberEmail')?.errors?.['duplicate']">Email đã tồn tại.</span>
+          <div
+            class="error"
+            *ngIf="form.get('memberEmail')?.touched && form.get('memberEmail')?.errors"
+          >
+            <span
+              *ngIf="form.get('memberEmail')?.errors?.['required']"
+              style="color: var(--color-red)"
+              >Email là bắt buộc.</span
+            >
+            <span *ngIf="form.get('memberEmail')?.errors?.['email']" style="color: var(--color-red)"
+              >Email không hợp lệ.</span
+            >
+            <span
+              *ngIf="form.get('memberEmail')?.errors?.['duplicate']"
+              style="color: var(--color-red)"
+              >Email đã tồn tại.</span
+            >
           </div>
         </div>
 
@@ -36,16 +49,15 @@
             <option *ngFor="let r of roleOptions" [value]="r">{{ r }}</option>
           </select>
         </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="btn btn-add" (click)="addMember()">Thêm</button>
 
-    </div>
-    <div class="actions">
-      <button type="button" class="btn btn-add" (click)="addMember()">Thêm</button>
-
-      <label class="upload-btn">
-        <input type="file" accept=".csv,.txt" (change)="onFileChange($event)" hidden />
-        <button type="button" class="btn btn-upload">Tải lên danh sách học sinh</button>
-      </label>
-    </div>
+        <label class="upload-btn">
+          <input type="file" accept=".csv,.txt" (change)="onFileChange($event)" hidden />
+          <button type="button" class="btn btn-upload">Tải lên danh sách học sinh</button>
+        </label>
+      </div>
 
       <div class="upload-error" *ngIf="uploadError">{{ uploadError }}</div>
 

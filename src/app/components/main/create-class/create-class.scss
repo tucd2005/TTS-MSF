@@ -37,7 +37,7 @@
         resize: vertical;
       }
       .error {
-        color: #e11d48;
+        color: var(--color-red);
         margin-top: 6px;
         font-size: 13px;
       }
@@ -56,26 +56,46 @@
       .add-member-row {
         display: flex;
         gap: 12px;
-        align-items: flex-end;
+        align-items: flex-start; /* Thay đổi: Align top để error push xuống dưới, Role không thụt theo bottom */
 
         .col {
           flex: 1;
+          display: flex;
+          flex-direction: column;
+          min-height: 90px; /* Thêm: Đủ chỗ cho label + input + error (~60px input + 30px error) */
+
           label {
             font-size: 15px;
             margin-bottom: 7px;
             display: block;
-            padding-top: 15px;
+            padding-top: 0; /* Giảm padding-top để align tốt hơn, thay bằng margin nếu cần */
             font-weight: 600;
           }
+
           input,
           select {
             width: 100%;
             padding: 9px 10px;
             border-radius: 8px;
             border: 1px solid #e5e7eb;
-
-            margin-bottom: 14px;
+            margin-bottom: 6px; /* Giảm margin-bottom để dư chỗ cho error */
           }
+
+          /* Nếu error nằm trong .col (từ .form-row .error), style riêng */
+          .error {
+            color: var(--color-red);
+            margin-top: 2px; /* Giảm margin để không push mạnh */
+            font-size: 12px; /* Nhỏ hơn để fit */
+            align-self: flex-start; /* Align left trong flex column */
+          }
+        }
+
+        /* Optional: Nếu muốn cân bằng height mà không min-height, thêm placeholder ở Role */
+        .role-col::after {
+          content: '';
+          display: block;
+          height: 20px; /* Match height error */
+          visibility: hidden;
         }
       }
       .actions {

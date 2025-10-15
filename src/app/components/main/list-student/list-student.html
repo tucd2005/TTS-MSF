@@ -1,7 +1,7 @@
 <main class="student-page">
   <!-- Sidebar -->
 
- <div class="left__side__bar">
+  <div class="left__side__bar">
     <ul>
       <li>Tất cả</li>
       <li>Danh sách</li>
@@ -9,7 +9,6 @@
   </div>
   <!-- Main content -->
   <section class="content">
-
     <div class="table-container">
       <table>
         <thead>
@@ -26,8 +25,7 @@
           <tr *ngFor="let student of students; index as i">
             <td>{{ i + 1 }}</td>
             <td class="avatar">
-
-                <img [src]="student.avatar" alt="avatar" />
+              <img [src]="student.avatar" alt="avatar" />
             </td>
             <td class="user-cell">
               <div class="user-info">
