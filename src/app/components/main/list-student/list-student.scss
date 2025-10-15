@@ -2,7 +2,7 @@
   display: flex;
   background: #f5f7fb;
   min-height: 100vh;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .left__side__bar {
@@ -56,17 +56,17 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-//   padding: 20px 40px;
+  //   padding: 20px 40px;
 }
 
 /* Table */
 .table-container {
- background: #fff;
-    border-radius: 16px;
-    /* margin-top: 24px; */
-    padding: 20px;
-    margin-left: 55px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+  background: #fff;
+  border-radius: 16px;
+  /* margin-top: 24px; */
+  padding: 20px;
+  margin-left: 55px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
 
   table {
     width: 100%;
@@ -95,8 +95,8 @@
     .user-cell {
       display: flex;
       align-items: center;
+      padding: 26px 23px 23px 10px;
       gap: 12px;
-
 
       .user-info {
         display: flex;
@@ -104,7 +104,8 @@
 
         .username {
           font-weight: 600;
-          color: #2563eb;
+          color: var(--color-black);
+          padding-bottom: 10px;
         }
 
         small {
