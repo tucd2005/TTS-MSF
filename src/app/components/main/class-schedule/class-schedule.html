@@ -1,76 +1,57 @@
 <div class="lich-hoc">
-    <h1 class="font-baloo">LỊCH HỌC</h1>
+  <h1 class="font-baloo">LỊCH HỌC</h1>
 
-    <div class="schedule-container">
-        <div class="schedule-table">
-            <!-- Header -->
-            <div class="header"></div>
-            <div class="header day"><p>Monday</p></div>
-            <div class="header day"><p>Tuesday</p></div>
-            <div class="header day"><p>Wednesday</p></div>
-            <div class="header day"><p>Thursday</p></div>
-            <div class="header day"><p>Friday</p></div>
-            <!-- Row 1 -->
-            <div class="time-box ">
-                <div>15:20</div>
-                <div>30/08/2025</div>
-            </div>
-            <div class="cell"><span class="dot gray"></span>Thêm chủ đề</div>
-            <div class="cell"><span class="dot gray"></span>Thêm chủ đề</div>
-            <div class="cell"><span class="dot gray"></span>Thêm chủ đề</div>
-            <div class="cell"><span class="dot gray"></span>Thêm chủ đề</div>
-            <div class="cell"><span class="dot gray"></span>Thêm chủ đề</div>
+  <div class="schedule-container">
+    <div class="schedule-table">
+      <!-- Header -->
+      <div class="header"></div>
+      <div class="header day" *ngFor="let day of days">
+        <p>{{ day }}</p>
+      </div>
 
-            <!-- Row 2 -->
-            <div class="time-box ">
-                <div>15:20</div>
-                <div>30/08/2025</div>
-            </div>
-            <div class="cell"><span class="dot gray"></span>Thêm chủ đề</div>
-            <div class="cell"><span class="dot gray"></span>Thêm chủ đề</div>
-            <div class="cell"><span class="dot red"></span>Nộp bài kiểm tra</div>
-            <div class="cell"><span class="dot gray"></span>Thêm chủ đề</div>
-            <div class="cell"><span class="dot gray"></span>Thêm chủ đề</div>
-
-            <!-- Row 3 -->
-            <div class="time-box ">
-                <div>15:20</div>
-                <div>30/08/2025</div>
-            </div>
-            <div class="cell"><span class="dot blue"></span>Tiết toán - Clan</div>
-            <div class="cell"><span class="dot gray"></span>Thêm chủ đề</div>
-            <div class="cell"><span class="dot red"></span>Nộp bài kiểm tra</div>
-            <div class="cell"><span class="dot gray"></span>Thêm chủ đề</div>
-            <div class="cell"><span class="dot gray"></span>Tiết toán - Clan</div>
-
-            <!-- Row 4 -->
-            <div class="time-box ">
-                <div>15:20</div>
-                <div>30/08/2025</div>
-            </div>
-            <div class="cell"><span class="dot gray"></span>Thêm chủ đề</div>
-            <div class="cell"><span class="dot gray"></span>Thêm chủ đề</div>
-            <div class="cell"><span class="dot gray"></span>Thêm chủ đề</div>
-            <div class="cell"><span class="dot gray"></span>Thêm chủ đề</div>
-            <div class="cell"><span class="dot gray"></span>Thêm chủ đề</div>
-
-            <!-- Row 5 -->
-            <div class="time-box ">
-                <div>15:20</div>
-                <div>30/08/2025</div>
-            </div>
-            <div class="cell"><span class="dot gray"></span>Thêm chủ đề</div>
-            <div class="cell"><span class="dot gray"></span>Thêm chủ đề</div>
-            <div class="cell"><span class="dot gray"></span>Thêm chủ đề</div>
-            <div class="cell"><span class="dot gray"></span>Thêm chủ đề</div>
-            <div class="cell"><span class="dot gray"></span>Thêm chủ đề</div>
+      <!-- Rows động từ timeSlots -->
+      <ng-container *ngFor="let slot of timeSlots; let slotIndex = index">
+        <!-- Time box -->
+        <div class="time-box">
+          <div>{{ slot.time }}</div>
+          <div>{{ slot.date }}</div>
         </div>
 
-        <!-- Pagination -->
-        <div class="pagination">
-            <button><i class="fa-solid fa-angles-left"></i></button>
-            <button class="active">Trước tiếp</button>
-            <button><i class="fa-solid fa-angles-right"></i></button>
+        <!-- Cells cho 5 ngày -->
+        <div
+          class="cell"
+          *ngFor="let mission of slot.missions; let missionIndex = index"
+          [ngClass]="{ bold: mission.text }"
+          (click)="
+            !isEditing(slotIndex, missionIndex) && startEdit(slotIndex, missionIndex, mission.text)
+          "
+        >
+          <span class="dot" [class]="'dot ' + getDotClass(mission.dot)"></span>
+
+          <!-- Display mode -->
+          <span *ngIf="!isEditing(slotIndex, missionIndex)" class="cell-text">
+            {{ mission.text || 'Thêm chủ đề' }}
+          </span>
+
+          <!-- Edit mode: input -->
+          <input
+            *ngIf="isEditing(slotIndex, missionIndex)"
+            [(ngModel)]="editText"
+            (blur)="saveEdit(slotIndex, missionIndex)"
+            (keydown.enter)="saveEdit(slotIndex, missionIndex)"
+            (keydown.escape)="cancelEdit()"
+            class="edit-input"
+            autofocus
+          />
         </div>
+      </ng-container>
     </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+      <button><i class="fa-solid fa-angles-left"></i></button>
+      <button class="active">Trước tiếp</button>
+      <button><i class="fa-solid fa-angles-right"></i></button>
+    </div>
+  </div>
 </div>
